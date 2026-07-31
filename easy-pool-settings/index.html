@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Politique de confidentialité — Easy Pool Settings</title>
+<title>Politique de confidentialité / Privacy Policy / Política de privacidad — Easy Pool Settings</title>
 <style>
   :root {
     --bleu-principal: #0A4D8C;
@@ -23,62 +23,32 @@
   header {
     background: linear-gradient(180deg, var(--bleu-principal) 0%, var(--bleu-fonce) 100%);
     color: white;
-    padding: 48px 24px 40px;
+    padding: 40px 24px 32px;
     text-align: center;
   }
-  header .drop {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 16px;
+  header .drop { width: 52px; height: 52px; margin: 0 auto 14px; }
+  header h1 { margin: 0 0 6px; font-size: 1.5rem; font-weight: 700; }
+  header p.sub { margin: 0; color: var(--turquoise); font-size: 0.9rem; }
+  .lang-switch { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+  .lang-switch button {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white; padding: 7px 16px; border-radius: 20px;
+    font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.15s;
   }
-  header h1 {
-    margin: 0 0 8px;
-    font-size: 1.6rem;
-    font-weight: 700;
-  }
-  header p {
-    margin: 0;
-    color: var(--turquoise);
-    font-size: 0.95rem;
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-  h2 {
-    color: var(--bleu-principal);
-    font-size: 1.15rem;
-    margin-top: 2.2em;
-    margin-bottom: 0.6em;
-    border-bottom: 2px solid var(--turquoise);
-    padding-bottom: 6px;
-  }
-  p { margin: 0.8em 0; }
-  .meta {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 2em;
-  }
-  .contact {
-    background: white;
-    border: 1px solid #dbe9f2;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-top: 2.5em;
-  }
-  .contact a {
-    color: var(--bleu-principal);
-    font-weight: 600;
-    text-decoration: none;
-  }
+  .lang-switch button:hover { background: rgba(255,255,255,0.22); }
+  .lang-switch button.active { background: var(--turquoise); color: var(--bleu-fonce); border-color: var(--turquoise); }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  h2 { color: var(--bleu-principal); font-size: 1.1rem; margin-top: 2em; margin-bottom: 0.5em; border-bottom: 2px solid var(--turquoise); padding-bottom: 6px; }
+  p { margin: 0.75em 0; }
+  .meta { font-size: 0.9rem; color: #555; margin-bottom: 2em; }
+  .contact { background: white; border: 1px solid #dbe9f2; border-radius: 12px; padding: 20px 24px; margin-top: 2.5em; }
+  .contact a { color: var(--bleu-principal); font-weight: 600; text-decoration: none; }
   .contact a:hover { text-decoration: underline; }
-  footer {
-    text-align: center;
-    padding: 24px;
-    font-size: 0.85rem;
-    color: #7a8899;
-  }
+  .crosslink { display: inline-block; margin-bottom: 24px; color: var(--bleu-principal); font-size: 0.9rem; }
+  footer { text-align: center; padding: 24px; font-size: 0.85rem; color: #7a8899; }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
 </style>
 </head>
 <body>
@@ -87,48 +57,140 @@
   <svg class="drop" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <path d="M50 10 C50 10 78 52 78 68 A28 28 0 1 1 22 68 C22 52 50 10 50 10 Z" fill="#8FDDEE"/>
   </svg>
-  <h1>Politique de confidentialité</h1>
-  <p>Easy Pool Settings</p>
+  <h1 data-i18n="title">Politique de confidentialité</h1>
+  <p class="sub">Easy Pool Settings</p>
+  <div class="lang-switch">
+    <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+    <button data-lang="es" onclick="setLang('es')">ES</button>
+  </div>
 </header>
 
 <main>
-  <p class="meta">Date d'entrée en vigueur : 2026</p>
+  <a class="crosslink" href="./conditions.html" data-i18n="crosslink">Voir les Conditions d'utilisation →</a>
 
-  <p>Cette politique de confidentialité explique comment l'application Easy Pool Settings (« l'Application »), éditée par Jean-Bernard Gallo, traite vos informations.</p>
+  <div class="lang-content active" id="content-fr">
+    <p class="meta">Date d'entrée en vigueur : 2026</p>
+    <p>Cette politique de confidentialité explique comment l'application Easy Pool Settings (« l'Application »), éditée par Jean-Bernard Gallo, traite vos informations.</p>
 
-  <h2>1. Aucune collecte de données</h2>
-  <p>L'Application ne collecte, ne transmet et ne stocke aucune donnée personnelle. Elle ne requiert aucun compte, aucune inscription et aucune connexion. Elle ne contient aucune publicité et aucun outil d'analyse ou de suivi (analytique).</p>
+    <h2>1. Aucune collecte de données</h2>
+    <p>L'Application ne collecte, ne transmet et ne stocke aucune donnée personnelle. Elle ne requiert aucun compte, aucune inscription et aucune connexion. Elle ne contient aucune publicité et aucun outil d'analyse ou de suivi (analytique).</p>
 
-  <h2>2. Données stockées localement</h2>
-  <p>Les informations que vous saisissez dans l'Application (caractéristiques de vos bassins, mesures d'eau, historique de tests, préférences) sont enregistrées uniquement sur votre appareil. Elles ne sont jamais envoyées à l'éditeur ni à un tiers. Vous en gardez le plein contrôle : vous pouvez les modifier ou les supprimer à tout moment depuis l'Application, et elles sont définitivement effacées si vous désinstallez l'Application.</p>
+    <h2>2. Données stockées localement</h2>
+    <p>Les informations que vous saisissez dans l'Application (caractéristiques de vos bassins, mesures d'eau, historique de tests, préférences) sont enregistrées uniquement sur votre appareil. Elles ne sont jamais envoyées à l'éditeur ni à un tiers. Vous en gardez le plein contrôle : vous pouvez les modifier ou les supprimer à tout moment depuis l'Application, et elles sont définitivement effacées si vous désinstallez l'Application.</p>
 
-  <h2>3. Fonctionnement hors ligne</h2>
-  <p>L'Application fonctionne entièrement hors ligne. Aucune connexion Internet n'est nécessaire pour l'utiliser.</p>
+    <h2>3. Fonctionnement hors ligne</h2>
+    <p>L'Application fonctionne entièrement hors ligne. Aucune connexion Internet n'est nécessaire pour l'utiliser.</p>
 
-  <h2>4. Liens externes</h2>
-  <p>L'Application peut proposer des liens vers des sites tiers (ressources officielles, sites de fabricants). Si vous les ouvrez, vous quittez l'Application et accédez à ces sites, qui possèdent leurs propres politiques de confidentialité. Nous ne sommes pas responsables de leurs pratiques.</p>
+    <h2>4. Liens externes</h2>
+    <p>L'Application peut proposer des liens vers des sites tiers (ressources officielles, sites de fabricants). Si vous les ouvrez, vous quittez l'Application et accédez à ces sites, qui possèdent leurs propres politiques de confidentialité. Nous ne sommes pas responsables de leurs pratiques.</p>
 
-  <h2>5. Partage de fichiers</h2>
-  <p>Si vous générez un document (par exemple un plan d'action en PDF) et choisissez de le partager, ce partage se fait via les fonctions de votre appareil, sous votre contrôle. L'éditeur n'y a pas accès.</p>
+    <h2>5. Partage de fichiers</h2>
+    <p>Si vous générez un document (par exemple un plan d'action en PDF) et choisissez de le partager, ce partage se fait via les fonctions de votre appareil, sous votre contrôle. L'éditeur n'y a pas accès.</p>
 
-  <h2>6. Enfants</h2>
-  <p>L'Application est destinée aux personnes de 18 ans et plus et ne collecte aucune donnée, y compris auprès des mineurs.</p>
+    <h2>6. Enfants</h2>
+    <p>L'Application est destinée aux personnes de 18 ans et plus et ne collecte aucune donnée, y compris auprès des mineurs.</p>
 
-  <h2>7. Achats</h2>
-  <p>Les achats sont traités par l'App Store (Apple) ou le Google Play Store (Google) selon leurs propres politiques. L'éditeur ne reçoit ni ne traite aucune information de paiement.</p>
+    <h2>7. Achats</h2>
+    <p>Les achats sont traités par l'App Store (Apple) ou le Google Play Store (Google) selon leurs propres politiques. L'éditeur ne reçoit ni ne traite aucune information de paiement.</p>
 
-  <h2>8. Modifications</h2>
-  <p>Cette politique peut être mise à jour ; la date d'entrée en vigueur sera modifiée en conséquence.</p>
+    <h2>8. Modifications</h2>
+    <p>Cette politique peut être mise à jour ; la date d'entrée en vigueur sera modifiée en conséquence.</p>
 
-  <div class="contact">
-    <strong>9. Contact</strong>
-    <p style="margin-bottom:0;">Pour toute question : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    <div class="contact">
+      <strong>9. Contact</strong>
+      <p style="margin-bottom:0;">Pour toute question : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    </div>
   </div>
+
+  <div class="lang-content" id="content-en">
+    <p class="meta">Effective date: 2026</p>
+    <p>This privacy policy explains how the Easy Pool Settings application (the "App"), published by Jean-Bernard Gallo, handles your information.</p>
+
+    <h2>1. No data collection</h2>
+    <p>The App does not collect, transmit, or store any personal data. It does not require an account, registration, or login. It contains no advertising and no analytics or tracking tools.</p>
+
+    <h2>2. Locally stored data</h2>
+    <p>The information you enter in the App (pool/spa characteristics, water measurements, test history, preferences) is saved only on your device. It is never sent to the publisher or to any third party. You retain full control: you can modify or delete it at any time from within the App, and it is permanently erased if you uninstall the App.</p>
+
+    <h2>3. Offline operation</h2>
+    <p>The App works entirely offline. No internet connection is required to use it.</p>
+
+    <h2>4. External links</h2>
+    <p>The App may offer links to third-party sites (official resources, manufacturer websites). If you open them, you leave the App and access those sites, which have their own privacy policies. We are not responsible for their practices.</p>
+
+    <h2>5. File sharing</h2>
+    <p>If you generate a document (for example a PDF action plan) and choose to share it, this sharing happens through your device's own features, under your control. The publisher has no access to it.</p>
+
+    <h2>6. Children</h2>
+    <p>The App is intended for people aged 18 and over and collects no data, including from minors.</p>
+
+    <h2>7. Purchases</h2>
+    <p>Purchases are processed by the App Store (Apple) or Google Play Store (Google) according to their own policies. The publisher does not receive or process any payment information.</p>
+
+    <h2>8. Changes</h2>
+    <p>This policy may be updated; the effective date will be changed accordingly.</p>
+
+    <div class="contact">
+      <strong>9. Contact</strong>
+      <p style="margin-bottom:0;">For any question: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="lang-content" id="content-es">
+    <p class="meta">Fecha de entrada en vigor: 2026</p>
+    <p>Esta política de privacidad explica cómo la aplicación Easy Pool Settings (la «Aplicación»), publicada por Jean-Bernard Gallo, trata su información.</p>
+
+    <h2>1. Ninguna recopilación de datos</h2>
+    <p>La Aplicación no recopila, transmite ni almacena ningún dato personal. No requiere cuenta, registro ni inicio de sesión. No contiene publicidad ni herramientas de análisis o seguimiento.</p>
+
+    <h2>2. Datos almacenados localmente</h2>
+    <p>La información que usted introduce en la Aplicación (características de sus piscinas/spas, mediciones del agua, historial de pruebas, preferencias) se guarda únicamente en su dispositivo. Nunca se envía al editor ni a terceros. Usted mantiene el control total: puede modificarla o eliminarla en cualquier momento desde la Aplicación, y se borra definitivamente si desinstala la Aplicación.</p>
+
+    <h2>3. Funcionamiento sin conexión</h2>
+    <p>La Aplicación funciona completamente sin conexión a internet. No se requiere conexión a internet para utilizarla.</p>
+
+    <h2>4. Enlaces externos</h2>
+    <p>La Aplicación puede ofrecer enlaces a sitios de terceros (recursos oficiales, sitios de fabricantes). Si los abre, sale de la Aplicación y accede a esos sitios, que tienen sus propias políticas de privacidad. No somos responsables de sus prácticas.</p>
+
+    <h2>5. Compartir archivos</h2>
+    <p>Si genera un documento (por ejemplo, un plan de acción en PDF) y decide compartirlo, esto se realiza a través de las funciones de su dispositivo, bajo su control. El editor no tiene acceso a ello.</p>
+
+    <h2>6. Menores</h2>
+    <p>La Aplicación está destinada a personas mayores de 18 años y no recopila ningún dato, ni siquiera de menores.</p>
+
+    <h2>7. Compras</h2>
+    <p>Las compras son procesadas por App Store (Apple) o Google Play Store (Google) según sus propias políticas. El editor no recibe ni procesa ninguna información de pago.</p>
+
+    <h2>8. Modificaciones</h2>
+    <p>Esta política puede actualizarse; la fecha de entrada en vigor se modificará en consecuencia.</p>
+
+    <div class="contact">
+      <strong>9. Contacto</strong>
+      <p style="margin-bottom:0;">Para cualquier pregunta: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    </div>
+  </div>
+
 </main>
 
-<footer>
-  © 2026 Jean-Bernard Gallo — Easy Pool Settings
-</footer>
+<footer>© 2026 Jean-Bernard Gallo — Easy Pool Settings</footer>
+
+<script>
+  const titles = { fr: "Politique de confidentialité", en: "Privacy Policy", es: "Política de privacidad" };
+  const crosslinks = { fr: "Voir les Conditions d'utilisation →", en: "View Terms of Use →", es: "Ver los Términos de uso →" };
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.getElementById('content-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('.lang-switch button[data-lang="' + lang + '"]').classList.add('active');
+    document.querySelector('[data-i18n="title"]').textContent = titles[lang];
+    document.querySelector('[data-i18n="crosslink"]').textContent = crosslinks[lang];
+    document.documentElement.lang = lang;
+    localStorage.setItem('eps-lang', lang);
+  }
+  const saved = localStorage.getItem('eps-lang');
+  if (saved && titles[saved]) setLang(saved);
+</script>
 
 </body>
 </html>

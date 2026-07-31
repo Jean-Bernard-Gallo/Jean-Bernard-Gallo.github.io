@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conditions d'utilisation — Easy Pool Settings</title>
+<title>Conditions d'utilisation / Terms of Use / Términos de uso — Easy Pool Settings</title>
 <style>
   :root {
     --bleu-principal: #0A4D8C;
@@ -13,89 +13,27 @@
     --fond-clair: #f4f9fc;
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--fond-clair);
-    color: var(--texte);
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(180deg, var(--bleu-principal) 0%, var(--bleu-fonce) 100%);
-    color: white;
-    padding: 48px 24px 40px;
-    text-align: center;
-  }
-  header .drop {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 16px;
-  }
-  header h1 {
-    margin: 0 0 8px;
-    font-size: 1.6rem;
-    font-weight: 700;
-  }
-  header p {
-    margin: 0;
-    color: var(--turquoise);
-    font-size: 0.95rem;
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-  h2 {
-    color: var(--bleu-principal);
-    font-size: 1.1rem;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    border-bottom: 2px solid var(--turquoise);
-    padding-bottom: 6px;
-  }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--fond-clair); color: var(--texte); line-height: 1.6; }
+  header { background: linear-gradient(180deg, var(--bleu-principal) 0%, var(--bleu-fonce) 100%); color: white; padding: 40px 24px 32px; text-align: center; }
+  header .drop { width: 52px; height: 52px; margin: 0 auto 14px; }
+  header h1 { margin: 0 0 6px; font-size: 1.5rem; font-weight: 700; }
+  header p.sub { margin: 0; color: var(--turquoise); font-size: 0.9rem; }
+  .lang-switch { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+  .lang-switch button { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+  .lang-switch button:hover { background: rgba(255,255,255,0.22); }
+  .lang-switch button.active { background: var(--turquoise); color: var(--bleu-fonce); border-color: var(--turquoise); }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  h2 { color: var(--bleu-principal); font-size: 1.1rem; margin-top: 2em; margin-bottom: 0.5em; border-bottom: 2px solid var(--turquoise); padding-bottom: 6px; }
   p { margin: 0.7em 0; }
-  strong.warn {
-    display: block;
-    background: #fff4e5;
-    border-left: 4px solid #d98c00;
-    padding: 12px 16px;
-    border-radius: 6px;
-    margin: 0.9em 0;
-    font-weight: 600;
-  }
-  .meta {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 2em;
-  }
-  .contact {
-    background: white;
-    border: 1px solid #dbe9f2;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-top: 2.5em;
-  }
-  .contact a {
-    color: var(--bleu-principal);
-    font-weight: 600;
-    text-decoration: none;
-  }
+  strong.warn { display: block; background: #fff4e5; border-left: 4px solid #d98c00; padding: 12px 16px; border-radius: 6px; margin: 0.9em 0; font-weight: 600; }
+  .meta { font-size: 0.9rem; color: #555; margin-bottom: 2em; }
+  .contact { background: white; border: 1px solid #dbe9f2; border-radius: 12px; padding: 20px 24px; margin-top: 2.5em; }
+  .contact a { color: var(--bleu-principal); font-weight: 600; text-decoration: none; }
   .contact a:hover { text-decoration: underline; }
-  .back {
-    display: inline-block;
-    margin-bottom: 24px;
-    color: var(--turquoise);
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  .back:hover { text-decoration: underline; }
-  footer {
-    text-align: center;
-    padding: 24px;
-    font-size: 0.85rem;
-    color: #7a8899;
-  }
+  .crosslink { display: inline-block; margin-bottom: 24px; color: var(--bleu-principal); font-size: 0.9rem; }
+  footer { text-align: center; padding: 24px; font-size: 0.85rem; color: #7a8899; }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
 </style>
 </head>
 <body>
@@ -104,70 +42,197 @@
   <svg class="drop" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <path d="M50 10 C50 10 78 52 78 68 A28 28 0 1 1 22 68 C22 52 50 10 50 10 Z" fill="#8FDDEE"/>
   </svg>
-  <h1>Conditions d'utilisation</h1>
-  <p>Easy Pool Settings</p>
+  <h1 data-i18n="title">Conditions d'utilisation</h1>
+  <p class="sub">Easy Pool Settings</p>
+  <div class="lang-switch">
+    <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+    <button data-lang="es" onclick="setLang('es')">ES</button>
+  </div>
 </header>
 
 <main>
-  <a class="back" href="./index.html">← Politique de confidentialité</a>
-  <p class="meta">Date d'entrée en vigueur : 2026</p>
+  <a class="crosslink" href="./index.html" data-i18n="crosslink">← Voir la Politique de confidentialité</a>
 
-  <p>Les présentes conditions d'utilisation (« Conditions ») régissent votre utilisation de l'application mobile Easy Pool Settings (« l'Application »), éditée par Jean-Bernard Gallo (« l'éditeur », « nous »). En téléchargeant ou en utilisant l'Application, vous acceptez d'être lié par ces Conditions. Si vous n'y consentez pas, n'utilisez pas l'Application.</p>
+  <div class="lang-content active" id="content-fr">
+    <p class="meta">Date d'entrée en vigueur : 2026</p>
+    <p>Les présentes conditions d'utilisation (« Conditions ») régissent votre utilisation de l'application mobile Easy Pool Settings (« l'Application »), éditée par Jean-Bernard Gallo (« l'éditeur », « nous »). En téléchargeant ou en utilisant l'Application, vous acceptez d'être lié par ces Conditions. Si vous n'y consentez pas, n'utilisez pas l'Application.</p>
 
-  <h2>1. Acceptation et admissibilité</h2>
-  <p>En utilisant l'Application, vous confirmez : être âgé d'au moins 18 ans ; avoir la capacité légale d'accepter ces Conditions ; respecter ces Conditions et les lois applicables. En raison de la manipulation de produits chimiques pour piscines et spas, qui peut présenter des risques, l'Application est destinée aux personnes de 18 ans et plus.</p>
+    <h2>1. Acceptation et admissibilité</h2>
+    <p>En utilisant l'Application, vous confirmez : être âgé d'au moins 18 ans ; avoir la capacité légale d'accepter ces Conditions ; respecter ces Conditions et les lois applicables. En raison de la manipulation de produits chimiques pour piscines et spas, qui peut présenter des risques, l'Application est destinée aux personnes de 18 ans et plus.</p>
 
-  <h2>2. Nature de l'application</h2>
-  <p>Easy Pool Settings est un outil d'aide et d'information pour l'entretien de l'eau de piscines et de spas. L'Application fonctionne entièrement sur votre appareil : elle ne nécessite pas de compte, et vos données (bassins, mesures, historique) sont stockées localement sur votre appareil uniquement. Nous ne collectons, ne transmettons ni ne stockons aucune de vos données. Pour plus de détails, consultez notre <a href="./index.html">Politique de confidentialité</a>.</p>
+    <h2>2. Nature de l'application</h2>
+    <p>Easy Pool Settings est un outil d'aide et d'information pour l'entretien de l'eau de piscines et de spas. L'Application fonctionne entièrement sur votre appareil : elle ne nécessite pas de compte, et vos données sont stockées localement sur votre appareil uniquement. Nous ne collectons, ne transmettons ni ne stockons aucune de vos données. Pour plus de détails, consultez notre <a href="./index.html">Politique de confidentialité</a>.</p>
 
-  <h2>3. Achat</h2>
-  <p>L'Application est proposée via l'App Store et le Google Play Store sous forme d'achat unique au prix affiché dans la boutique. Les achats sont traités par Apple ou Google ; toute demande de remboursement doit être adressée directement à la boutique concernée, selon ses politiques. L'éditeur ne traite aucun paiement et ne peut émettre de remboursement.</p>
+    <h2>3. Achat</h2>
+    <p>L'Application est proposée via l'App Store et le Google Play Store sous forme d'achat unique au prix affiché dans la boutique. Les achats sont traités par Apple ou Google ; toute demande de remboursement doit être adressée directement à la boutique concernée. L'éditeur ne traite aucun paiement et ne peut émettre de remboursement.</p>
 
-  <h2>4. Licence et utilisation</h2>
-  <p>Nous vous accordons une licence limitée, non exclusive et non transférable d'utiliser l'Application à des fins personnelles. Vous vous engagez à ne pas : copier, modifier, distribuer ou revendre l'Application ; effectuer de l'ingénierie inverse ou tenter d'en extraire le code source ; retirer les mentions de propriété ; ni l'utiliser à des fins illégales.</p>
+    <h2>4. Licence et utilisation</h2>
+    <p>Nous vous accordons une licence limitée, non exclusive et non transférable d'utiliser l'Application à des fins personnelles. Vous vous engagez à ne pas copier, modifier, distribuer ou revendre l'Application, effectuer de l'ingénierie inverse, retirer les mentions de propriété, ni l'utiliser à des fins illégales.</p>
 
-  <h2>5. Avertissements — chimie et sécurité</h2>
-  <strong class="warn">IMPORTANT : l'Application fournit des calculs et des recommandations à titre informatif seulement. Elle ne remplace pas les services d'un professionnel qualifié, l'analyse de l'eau par un spécialiste, ni les instructions des fabricants de produits et d'équipements.</strong>
-  <strong class="warn">AVERTISSEMENT : les produits chimiques pour piscines et spas sont des matières dangereuses pouvant causer des blessures graves, des dommages matériels ou la mort en cas de mauvaise manipulation. Les calculs de l'Application sont des estimations fondées sur les données que vous saisissez et peuvent ne pas tenir compte de toutes les variables de votre situation. Ne vous fiez jamais uniquement à l'Application pour manipuler des produits chimiques. Vérifiez toujours les recommandations auprès des instructions du fabricant et consultez un professionnel qualifié en cas de doute.</strong>
-  <p>Vous êtes seul responsable de : lire et suivre les instructions et fiches de sécurité des fabricants ; porter un équipement de protection approprié ; entreposer les produits en sécurité, hors de portée des enfants et des animaux ; ne jamais mélanger différents produits entre eux ; assurer une ventilation adéquate ; et respecter la réglementation locale de manipulation et d'élimination.</p>
-  <p>Les recommandations reposent sur des standards généralement admis et sur les informations que vous fournissez. Les besoins réels peuvent différer sensiblement selon la source d'eau, les conditions environnementales, l'état de l'équipement, la précision des mesures et d'autres variables que l'Application ne peut détecter. Commencez toujours par de plus petites doses que celles recommandées et refaites un test avant d'en ajouter.</p>
-  <p><strong>Vous utilisez l'Application entièrement à vos propres risques. Nous ne garantissons aucun résultat.</strong></p>
+    <h2>5. Avertissements — chimie et sécurité</h2>
+    <strong class="warn">IMPORTANT : l'Application fournit des calculs et des recommandations à titre informatif seulement. Elle ne remplace pas les services d'un professionnel qualifié, l'analyse de l'eau par un spécialiste, ni les instructions des fabricants.</strong>
+    <strong class="warn">AVERTISSEMENT : les produits chimiques pour piscines et spas sont des matières dangereuses pouvant causer des blessures graves, des dommages matériels ou la mort en cas de mauvaise manipulation. Ne vous fiez jamais uniquement à l'Application pour manipuler des produits chimiques. Vérifiez toujours les recommandations auprès des instructions du fabricant et consultez un professionnel qualifié en cas de doute.</strong>
+    <p>Vous êtes seul responsable de lire et suivre les instructions et fiches de sécurité des fabricants, porter un équipement de protection approprié, entreposer les produits en sécurité, hors de portée des enfants, ne jamais mélanger différents produits entre eux, et respecter la réglementation locale.</p>
+    <p>Commencez toujours par de plus petites doses que celles recommandées et refaites un test avant d'en ajouter. <strong>Vous utilisez l'Application entièrement à vos propres risques. Nous ne garantissons aucun résultat.</strong></p>
 
-  <h2>6. Conformité réglementaire et sécurité</h2>
-  <p>Vous êtes responsable de vous conformer à la réglementation applicable dans votre région et votre municipalité. Au Québec, cela inclut notamment le <em>Règlement sur la sécurité des piscines résidentielles</em> (aménagement et sécurisation des accès — toute piscine dont la profondeur d'eau peut atteindre 60 cm ou plus doit être sécurisée) et le <em>Règlement sur la qualité de l'eau des piscines et autres bassins artificiels</em>. Ces règles sont appliquées par les municipalités. L'Application peut renvoyer à des ressources officielles à titre informatif, mais ne se substitue pas à ces réglementations ni à leur vérification auprès des autorités compétentes.</p>
+    <h2>6. Conformité réglementaire et sécurité</h2>
+    <p>Vous êtes responsable de vous conformer à la réglementation applicable dans votre région. Au Québec, cela inclut notamment le <em>Règlement sur la sécurité des piscines résidentielles</em> et le <em>Règlement sur la qualité de l'eau des piscines et autres bassins artificiels</em>. L'Application peut renvoyer à des ressources officielles à titre informatif, mais ne se substitue pas à ces réglementations.</p>
 
-  <h2>7. Exclusion de garanties</h2>
-  <p>L'Application est fournie « telle quelle » et « selon disponibilité », sans garantie d'aucune sorte, expresse ou implicite. Dans la mesure permise par la loi, nous déclinons toute garantie, notamment de qualité marchande, d'adéquation à un usage particulier, d'absence d'erreur ou d'exactitude des calculs. Certaines juridictions n'autorisent pas l'exclusion de garanties implicites ; ces exclusions peuvent donc ne pas s'appliquer à vous.</p>
+    <h2>7. Exclusion de garanties</h2>
+    <p>L'Application est fournie « telle quelle » et « selon disponibilité », sans garantie d'aucune sorte, expresse ou implicite, notamment de qualité marchande, d'adéquation à un usage particulier, ou d'exactitude des calculs.</p>
 
-  <h2>8. Limitation de responsabilité</h2>
-  <p>Dans la mesure permise par la loi, l'éditeur ne pourra être tenu responsable de dommages indirects, accessoires, spéciaux ou consécutifs, ni de toute perte découlant de : votre utilisation ou incapacité à utiliser l'Application ; toute manipulation, application ou exposition à des produits chimiques ; tout dommage matériel ou blessure lié à l'entretien d'une piscine ou d'un spa ; ou toute décision prise sur la base des recommandations de l'Application. Certaines juridictions n'autorisent pas ces limitations ; elles peuvent donc ne pas s'appliquer à vous.</p>
+    <h2>8. Limitation de responsabilité</h2>
+    <p>Dans la mesure permise par la loi, l'éditeur ne pourra être tenu responsable de dommages découlant de votre utilisation de l'Application, de toute manipulation de produits chimiques, ou de toute décision prise sur la base de ses recommandations.</p>
 
-  <h2>9. Indemnisation</h2>
-  <p>Vous acceptez d'indemniser et de dégager de toute responsabilité l'éditeur à l'égard de toute réclamation découlant de : votre violation des présentes Conditions ; votre utilisation de l'Application ; ou toute manipulation, application ou entreposage de produits chimiques.</p>
+    <h2>9. Indemnisation</h2>
+    <p>Vous acceptez d'indemniser l'éditeur à l'égard de toute réclamation découlant de votre violation des présentes Conditions ou de votre utilisation de l'Application.</p>
 
-  <h2>10. Propriété intellectuelle</h2>
-  <p>L'Application, son contenu, ses algorithmes de calcul, son interface et le nom « Easy Pool Settings » demeurent la propriété de l'éditeur et sont protégés par les lois applicables. Aucun droit ne vous est cédé au-delà de la licence d'utilisation.</p>
+    <h2>10. Propriété intellectuelle</h2>
+    <p>L'Application, son contenu, ses algorithmes et le nom « Easy Pool Settings » demeurent la propriété de l'éditeur.</p>
 
-  <h2>11. Droit applicable</h2>
-  <p>Les présentes Conditions sont régies par les lois de la province de Québec et les lois du Canada qui y sont applicables. Tout litige relèvera des tribunaux compétents du Québec.</p>
+    <h2>11. Droit applicable</h2>
+    <p>Les présentes Conditions sont régies par les lois de la province de Québec et du Canada. Tout litige relèvera des tribunaux compétents du Québec.</p>
 
-  <h2>12. Modifications</h2>
-  <p>Nous pouvons modifier ces Conditions à tout moment. La date d'entrée en vigueur sera mise à jour en conséquence. Votre utilisation continue de l'Application après l'entrée en vigueur des modifications vaut acceptation.</p>
+    <h2>12. Modifications</h2>
+    <p>Nous pouvons modifier ces Conditions à tout moment ; votre utilisation continue de l'Application vaut acceptation des modifications.</p>
 
-  <h2>13. Dispositions relatives à Apple et Google</h2>
-  <p>Les présentes Conditions vous lient à l'éditeur uniquement, et non à Apple ou Google. Ces plateformes ne sont pas responsables de l'Application ni de son contenu et n'ont aucune obligation de maintenance ou de soutien. Apple et ses filiales sont des tiers bénéficiaires des présentes Conditions et peuvent les faire valoir à votre égard.</p>
+    <h2>13. Dispositions relatives à Apple et Google</h2>
+    <p>Les présentes Conditions vous lient à l'éditeur uniquement, et non à Apple ou Google. Apple et ses filiales sont des tiers bénéficiaires des présentes Conditions.</p>
 
-  <div class="contact">
-    <strong>14. Contact</strong>
-    <p style="margin-bottom:0;">Pour toute question concernant ces Conditions : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    <div class="contact">
+      <strong>14. Contact</strong>
+      <p style="margin-bottom:0;">Pour toute question : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    </div>
+    <p style="margin-top:2em; font-style:italic; color:#555;">En utilisant Easy Pool Settings, vous reconnaissez avoir lu, compris et accepté les présentes Conditions d'utilisation.</p>
   </div>
 
-  <p style="margin-top:2em; font-style:italic; color:#555;">En utilisant Easy Pool Settings, vous reconnaissez avoir lu, compris et accepté les présentes Conditions d'utilisation.</p>
+  <div class="lang-content" id="content-en">
+    <p class="meta">Effective date: 2026</p>
+    <p>These terms of use ("Terms") govern your use of the Easy Pool Settings mobile application (the "App"), published by Jean-Bernard Gallo ("the publisher", "we"). By downloading or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+
+    <h2>1. Acceptance and eligibility</h2>
+    <p>By using the App, you confirm that you are at least 18 years old, have the legal capacity to accept these Terms, and will comply with these Terms and applicable laws. Because of the handling of pool and spa chemicals, which may present risks, the App is intended for people aged 18 and over.</p>
+
+    <h2>2. Nature of the app</h2>
+    <p>Easy Pool Settings is a help and information tool for pool and spa water maintenance. The App works entirely on your device: it requires no account, and your data is stored locally on your device only. We do not collect, transmit, or store any of your data. See our <a href="./index.html">Privacy Policy</a> for details.</p>
+
+    <h2>3. Purchase</h2>
+    <p>The App is offered via the App Store and Google Play Store as a one-time purchase at the price shown in the store. Purchases are processed by Apple or Google; any refund request must be addressed directly to the relevant store. The publisher does not process payments or issue refunds.</p>
+
+    <h2>4. License and use</h2>
+    <p>We grant you a limited, non-exclusive, non-transferable license to use the App for personal purposes. You agree not to copy, modify, distribute or resell the App, reverse-engineer it, remove ownership notices, or use it for unlawful purposes.</p>
+
+    <h2>5. Warnings — chemistry and safety</h2>
+    <strong class="warn">IMPORTANT: The App provides calculations and recommendations for informational purposes only. It does not replace the services of a qualified professional, water analysis by a specialist, or manufacturer instructions.</strong>
+    <strong class="warn">WARNING: Pool and spa chemicals are hazardous materials that can cause serious injury, property damage, or death if mishandled. Never rely solely on the App to handle chemicals. Always verify recommendations against manufacturer instructions and consult a qualified professional if in doubt.</strong>
+    <p>You are solely responsible for reading and following manufacturer instructions and safety data sheets, wearing appropriate protective equipment, storing products safely out of reach of children, never mixing different products together, and complying with local regulations.</p>
+    <p>Always start with smaller doses than recommended and retest before adding more. <strong>You use the App entirely at your own risk. We make no guarantee of results.</strong></p>
+
+    <h2>6. Regulatory compliance and safety</h2>
+    <p>You are responsible for complying with the regulations applicable in your area. In Quebec, this includes the <em>Regulation respecting the safety of residential swimming pools</em> and the <em>Regulation respecting water quality in swimming pools</em>. The App may reference official resources for information purposes, but does not replace these regulations.</p>
+
+    <h2>7. Disclaimer of warranties</h2>
+    <p>The App is provided "as is" and "as available," without warranty of any kind, express or implied, including merchantability, fitness for a particular purpose, or accuracy of calculations.</p>
+
+    <h2>8. Limitation of liability</h2>
+    <p>To the extent permitted by law, the publisher shall not be liable for damages arising from your use of the App, any handling of chemicals, or any decision made based on its recommendations.</p>
+
+    <h2>9. Indemnification</h2>
+    <p>You agree to indemnify the publisher against any claim arising from your breach of these Terms or your use of the App.</p>
+
+    <h2>10. Intellectual property</h2>
+    <p>The App, its content, algorithms, and the name "Easy Pool Settings" remain the property of the publisher.</p>
+
+    <h2>11. Governing law</h2>
+    <p>These Terms are governed by the laws of the Province of Quebec and Canada. Any dispute shall be subject to the competent courts of Quebec.</p>
+
+    <h2>12. Changes</h2>
+    <p>We may modify these Terms at any time; your continued use of the App constitutes acceptance of the changes.</p>
+
+    <h2>13. Apple and Google provisions</h2>
+    <p>These Terms bind you to the publisher only, not to Apple or Google. Apple and its subsidiaries are third-party beneficiaries of these Terms.</p>
+
+    <div class="contact">
+      <strong>14. Contact</strong>
+      <p style="margin-bottom:0;">For any question: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    </div>
+    <p style="margin-top:2em; font-style:italic; color:#555;">By using Easy Pool Settings, you acknowledge that you have read, understood, and accepted these Terms of Use.</p>
+  </div>
+
+  <div class="lang-content" id="content-es">
+    <p class="meta">Fecha de entrada en vigor: 2026</p>
+    <p>Los presentes términos de uso («Términos») rigen su utilización de la aplicación móvil Easy Pool Settings (la «Aplicación»), publicada por Jean-Bernard Gallo («el editor», «nosotros»). Al descargar o utilizar la Aplicación, usted acepta quedar vinculado por estos Términos. Si no está de acuerdo, no utilice la Aplicación.</p>
+
+    <h2>1. Aceptación y elegibilidad</h2>
+    <p>Al utilizar la Aplicación, usted confirma que tiene al menos 18 años, que tiene la capacidad legal para aceptar estos Términos, y que cumplirá con estos Términos y las leyes aplicables. Debido a la manipulación de productos químicos para piscinas y spas, que puede presentar riesgos, la Aplicación está destinada a personas mayores de 18 años.</p>
+
+    <h2>2. Naturaleza de la aplicación</h2>
+    <p>Easy Pool Settings es una herramienta de ayuda e información para el mantenimiento del agua de piscinas y spas. La Aplicación funciona completamente en su dispositivo: no requiere cuenta, y sus datos se almacenan únicamente en su dispositivo. No recopilamos, transmitimos ni almacenamos ninguno de sus datos. Consulte nuestra <a href="./index.html">Política de privacidad</a> para más detalles.</p>
+
+    <h2>3. Compra</h2>
+    <p>La Aplicación se ofrece a través de App Store y Google Play Store como una compra única al precio indicado en la tienda. Las compras son procesadas por Apple o Google; cualquier solicitud de reembolso debe dirigirse directamente a la tienda correspondiente. El editor no procesa pagos ni emite reembolsos.</p>
+
+    <h2>4. Licencia y uso</h2>
+    <p>Le otorgamos una licencia limitada, no exclusiva e intransferible para utilizar la Aplicación con fines personales. Usted se compromete a no copiar, modificar, distribuir o revender la Aplicación, realizar ingeniería inversa, eliminar avisos de propiedad, ni utilizarla con fines ilegales.</p>
+
+    <h2>5. Advertencias — química y seguridad</h2>
+    <strong class="warn">IMPORTANTE: La Aplicación proporciona cálculos y recomendaciones únicamente con fines informativos. No sustituye los servicios de un profesional calificado, el análisis del agua por un especialista, ni las instrucciones del fabricante.</strong>
+    <strong class="warn">ADVERTENCIA: Los productos químicos para piscinas y spas son materiales peligrosos que pueden causar lesiones graves, daños materiales o la muerte si se manipulan incorrectamente. Nunca confíe únicamente en la Aplicación para manipular productos químicos. Verifique siempre las recomendaciones con las instrucciones del fabricante y consulte a un profesional calificado en caso de duda.</strong>
+    <p>Usted es el único responsable de leer y seguir las instrucciones y fichas de seguridad del fabricante, usar equipo de protección adecuado, almacenar los productos de forma segura fuera del alcance de los niños, nunca mezclar diferentes productos entre sí, y cumplir con la normativa local.</p>
+    <p>Comience siempre con dosis más pequeñas que las recomendadas y vuelva a analizar antes de añadir más. <strong>Usted utiliza la Aplicación bajo su entera responsabilidad. No garantizamos ningún resultado.</strong></p>
+
+    <h2>6. Cumplimiento normativo y seguridad</h2>
+    <p>Usted es responsable de cumplir con la normativa aplicable en su región. En Quebec, esto incluye el <em>Reglamento sobre la seguridad de las piscinas residenciales</em> y el <em>Reglamento sobre la calidad del agua de las piscinas</em>. La Aplicación puede remitir a recursos oficiales con fines informativos, pero no sustituye dicha normativa.</p>
+
+    <h2>7. Exclusión de garantías</h2>
+    <p>La Aplicación se proporciona «tal cual» y «según disponibilidad», sin garantía de ningún tipo, expresa o implícita, incluyendo comerciabilidad, idoneidad para un propósito particular, o exactitud de los cálculos.</p>
+
+    <h2>8. Limitación de responsabilidad</h2>
+    <p>En la medida permitida por la ley, el editor no será responsable de los daños derivados de su uso de la Aplicación, de cualquier manipulación de productos químicos, o de cualquier decisión tomada con base en sus recomendaciones.</p>
+
+    <h2>9. Indemnización</h2>
+    <p>Usted acepta indemnizar al editor frente a cualquier reclamación derivada de su incumplimiento de estos Términos o de su uso de la Aplicación.</p>
+
+    <h2>10. Propiedad intelectual</h2>
+    <p>La Aplicación, su contenido, sus algoritmos y el nombre «Easy Pool Settings» siguen siendo propiedad del editor.</p>
+
+    <h2>11. Ley aplicable</h2>
+    <p>Estos Términos se rigen por las leyes de la provincia de Quebec y de Canadá. Cualquier disputa estará sujeta a los tribunales competentes de Quebec.</p>
+
+    <h2>12. Modificaciones</h2>
+    <p>Podemos modificar estos Términos en cualquier momento; su uso continuado de la Aplicación constituye la aceptación de los cambios.</p>
+
+    <h2>13. Disposiciones relativas a Apple y Google</h2>
+    <p>Estos Términos le vinculan únicamente con el editor, no con Apple o Google. Apple y sus filiales son terceros beneficiarios de estos Términos.</p>
+
+    <div class="contact">
+      <strong>14. Contacto</strong>
+      <p style="margin-bottom:0;">Para cualquier pregunta: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+    </div>
+    <p style="margin-top:2em; font-style:italic; color:#555;">Al utilizar Easy Pool Settings, usted reconoce haber leído, comprendido y aceptado estos Términos de uso.</p>
+  </div>
+
 </main>
 
-<footer>
-  © 2026 Jean-Bernard Gallo — Easy Pool Settings
-</footer>
+<footer>© 2026 Jean-Bernard Gallo — Easy Pool Settings</footer>
+
+<script>
+  const titles = { fr: "Conditions d'utilisation", en: "Terms of Use", es: "Términos de uso" };
+  const crosslinks = { fr: "← Voir la Politique de confidentialité", en: "← View Privacy Policy", es: "← Ver la Política de privacidad" };
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.getElementById('content-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('.lang-switch button[data-lang="' + lang + '"]').classList.add('active');
+    document.querySelector('[data-i18n="title"]').textContent = titles[lang];
+    document.querySelector('[data-i18n="crosslink"]').textContent = crosslinks[lang];
+    document.documentElement.lang = lang;
+    localStorage.setItem('eps-lang', lang);
+  }
+  const saved = localStorage.getItem('eps-lang');
+  if (saved && titles[saved]) setLang(saved);
+</script>
 
 </body>
 </html>
