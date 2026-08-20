@@ -27,14 +27,35 @@
   header {
     background: linear-gradient(180deg, var(--bleu-principal) 0%, var(--bleu-fonce) 100%);
     color: white;
-    padding: 56px 24px 48px;
+    padding: 48px 24px 40px;
     text-align: center;
+    position: relative;
   }
-  header .logo { width: 56px; height: 56px; margin: 0 auto 16px; }
-  header h1 { margin: 0 0 8px; font-size: 2rem; font-weight: 700; letter-spacing: 0.5px; }
-  header p.sub { margin: 0; color: var(--turquoise); font-size: 1rem; }
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .lang-switch button {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .lang-switch button:hover { background: rgba(255,255,255,0.22); }
+  .lang-switch button.active { background: var(--turquoise); color: var(--bleu-fonce); border-color: var(--turquoise); }
 
-  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  header .logo { width: 52px; height: 52px; margin: 0 auto 14px; }
+  header h1 { margin: 0 0 10px; font-size: 2rem; font-weight: 700; letter-spacing: 0.5px; }
+  header p.sub { margin: 0 auto; max-width: 480px; color: var(--turquoise); font-size: 1rem; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
 
   section { margin-bottom: 56px; }
 
@@ -55,6 +76,7 @@
     font-size: 0.95rem;
     margin: 0 0 20px;
   }
+  .project-tagline strong { color: var(--texte); }
   .project-header {
     display: flex;
     align-items: center;
@@ -69,21 +91,6 @@
     object-fit: cover;
     background: var(--fond-clair);
   }
-  .app-icon-placeholder {
-    width: 72px;
-    height: 72px;
-    border-radius: 16px;
-    flex-shrink: 0;
-    background: var(--fond-clair);
-    border: 1px dashed var(--bordure);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.65rem;
-    color: var(--texte-doux);
-    text-align: center;
-    padding: 4px;
-  }
 
   p { margin: 0.9em 0; }
 
@@ -93,76 +100,129 @@
     overflow-x: auto;
     padding: 4px 0 8px;
     margin: 20px 0;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
   }
   .screen-frame {
     flex: 0 0 auto;
-    width: 150px;
+    width: 140px;
+    scroll-snap-align: start;
   }
   .screen-frame img {
-    width: 150px;
-    height: 300px;
-    object-fit: cover;
+    width: 140px;
+    height: auto;
     border-radius: 14px;
     border: 1px solid var(--bordure);
     display: block;
     background: var(--fond-clair);
   }
-  .screen-frame .screen-placeholder {
-    width: 150px;
-    height: 300px;
-    border-radius: 14px;
-    border: 1px dashed var(--bordure);
-    background: var(--fond-clair);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    color: var(--texte-doux);
-    text-align: center;
-    padding: 8px;
-  }
 
-  .cta {
-    display: inline-block;
+  .stores {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .store-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--texte);
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding: 0;
+  }
+  .store-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
     background: var(--bleu-principal);
     color: white;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 13px 28px;
-    border-radius: 30px;
-    margin-top: 8px;
-    transition: background 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.1s;
   }
-  .cta:hover { background: var(--bleu-fonce); }
+  .store-icon svg { width: 26px; height: 26px; }
+  .store-link:hover .store-icon { background: var(--bleu-fonce); }
+  .store-link:active .store-icon { transform: scale(0.96); }
+  .store-label { font-size: 0.75rem; color: var(--texte-doux); font-weight: 600; }
+
+  .store-link.disabled { cursor: not-allowed; position: relative; }
+  .store-link.disabled .store-icon { background: #b7c3d0; }
+  .store-link.disabled:hover .store-icon { background: #b7c3d0; }
+
+  .tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: var(--texte);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 7px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s, transform 0.15s;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--texte);
+  }
+  .store-link.disabled:hover .tooltip,
+  .store-link.disabled:focus-visible .tooltip,
+  .store-link.disabled.show-tooltip .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 
   .contact-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    gap: 14px;
+    justify-content: center;
+    gap: 20px;
   }
   .contact-list a {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--carte);
+    border: 1px solid var(--bordure);
     color: var(--bleu-principal);
-    font-weight: 600;
     text-decoration: none;
-    font-size: 1rem;
+    transition: background 0.15s, color 0.15s;
   }
-  .contact-list a:hover { text-decoration: underline; }
+  .contact-list a svg { width: 20px; height: 20px; }
+  .contact-list a:hover { background: var(--bleu-principal); color: white; }
 
   footer {
     text-align: center;
-    padding: 24px;
+    padding: 8px 24px 32px;
+  }
+  footer .copyright {
     font-size: 0.85rem;
     color: #7a8899;
+    margin-top: 20px;
   }
 
   @media (max-width: 480px) {
-    header { padding: 44px 20px 36px; }
+    header { padding: 40px 20px 32px; }
     header h1 { font-size: 1.6rem; }
     .card { padding: 24px 20px; }
     .project-header { flex-wrap: wrap; }
@@ -172,11 +232,15 @@
 <body>
 
 <header>
+  <div class="lang-switch">
+    <button type="button" data-lang-btn="fr" onclick="setLang('fr')">FR</button>
+    <button type="button" data-lang-btn="en" onclick="setLang('en')">EN</button>
+  </div>
   <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <path d="M50 10 C50 10 78 52 78 68 A28 28 0 1 1 22 68 C22 52 50 10 50 10 Z" fill="#8FDDEE"/>
   </svg>
   <h1>CTCode</h1>
-  <p class="sub">Connais Ton Code</p>
+  <p class="sub" data-i18n="tagline">Je conçois des applications mobiles pratiques qui simplifient des tâches du quotidien.</p>
 </header>
 
 <main>
@@ -184,50 +248,117 @@
   <section id="easy-pool-settings">
     <div class="card">
       <div class="project-header">
-        <img class="app-icon" src="assets/easy-pool-settings/icon.png" alt="Icône de l'application Easy Pool Settings"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="app-icon-placeholder">icon.png</div>
+        <img class="app-icon" src="assets/easy-pool-settings/icon/favicon.png" alt="Icône de l'application Easy Pool Settings">
         <div>
           <h2>Easy Pool Settings</h2>
-          <p class="project-tagline">Calculateur de chimie de piscine et spa — FR / EN / ES</p>
+          <p class="project-tagline"><span data-i18n="app-lang-label">Langues de l'application :</span> <strong>FR / EN / ES</strong></p>
         </div>
       </div>
 
-      <p>Easy Pool Settings est une application mobile qui simplifie l'entretien de l'eau de votre piscine ou spa : entrez vos mesures, obtenez des recommandations de dosage claires et gardez un historique de vos tests. Disponible en français, anglais et espagnol, et fonctionne entièrement hors ligne, sans collecte de données.</p>
+      <p data-i18n="app-description">Easy Pool Settings simplifie l'entretien de l'eau de votre piscine ou spa : entrez vos mesures et obtenez des recommandations de dosage claires en quelques secondes. L'application fonctionne entièrement hors ligne et ne collecte aucune donnée personnelle.</p>
 
       <div class="screens">
-        <div class="screen-frame">
-          <img src="assets/easy-pool-settings/screenshot-1.png" alt="Capture d'écran 1 de Easy Pool Settings"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="screen-placeholder">screenshot-1.png</div>
-        </div>
-        <div class="screen-frame">
-          <img src="assets/easy-pool-settings/screenshot-2.png" alt="Capture d'écran 2 de Easy Pool Settings"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="screen-placeholder">screenshot-2.png</div>
-        </div>
-        <div class="screen-frame">
-          <img src="assets/easy-pool-settings/screenshot-3.png" alt="Capture d'écran 3 de Easy Pool Settings"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="screen-placeholder">screenshot-3.png</div>
-        </div>
+        <div class="screen-frame"><img data-lang-src="assets/easy-pool-settings/screenshots/1-{lang}.png" alt="Capture d'écran 1 de Easy Pool Settings"></div>
+        <div class="screen-frame"><img data-lang-src="assets/easy-pool-settings/screenshots/2-{lang}.png" alt="Capture d'écran 2 de Easy Pool Settings"></div>
+        <div class="screen-frame"><img data-lang-src="assets/easy-pool-settings/screenshots/3-{lang}.png" alt="Capture d'écran 3 de Easy Pool Settings"></div>
+        <div class="screen-frame"><img data-lang-src="assets/easy-pool-settings/screenshots/4-{lang}.png" alt="Capture d'écran 4 de Easy Pool Settings"></div>
+        <div class="screen-frame"><img data-lang-src="assets/easy-pool-settings/screenshots/5-{lang}.png" alt="Capture d'écran 5 de Easy Pool Settings"></div>
+        <div class="screen-frame"><img data-lang-src="assets/easy-pool-settings/screenshots/6-{lang}.png" alt="Capture d'écran 6 de Easy Pool Settings"></div>
       </div>
 
-      <a class="cta" href="https://apps.apple.com/ca/app/easy-pool-settings/id6796893830" target="_blank" rel="noopener">Voir sur l'App Store →</a>
+      <div class="stores">
+        <a class="store-link" href="https://apps.apple.com/ca/app/easy-pool-settings/id6796893830" target="_blank" rel="noopener" aria-label="App Store">
+          <span class="store-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </span>
+          <span class="store-label">App Store</span>
+        </a>
+        <button type="button" class="store-link disabled" aria-disabled="true" aria-label="Google Play" onclick="this.classList.toggle('show-tooltip')">
+          <span class="store-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 4 3.5z"/></svg>
+            <span class="tooltip" data-i18n="play-tooltip">Pas encore disponible sur ce store</span>
+          </span>
+          <span class="store-label">Google Play</span>
+        </button>
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
     <ul class="contact-list">
-      <li><a href="mailto:kycodesoft@gmail.com">✉️ kycodesoft@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/jeanbernardgallo/" target="_blank" rel="noopener">🔗 Profil LinkedIn</a></li>
+      <li>
+        <a href="mailto:kycodesoft@gmail.com" data-i18n-aria="contact-email" aria-label="Écrire un courriel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/jeanbernardgallo/" target="_blank" rel="noopener" data-i18n-aria="contact-linkedin" aria-label="Profil LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+        </a>
+      </li>
     </ul>
   </section>
 
 </main>
 
-<footer>© 2026 CTCode — Jean-Bernard Gallo</footer>
+<footer>
+  <p class="copyright">© 2026 CTCode — Jean-Bernard Gallo</p>
+</footer>
+
+<script>
+  const translations = {
+    fr: {
+      tagline: "Je conçois des applications mobiles pratiques qui simplifient des tâches du quotidien.",
+      "app-lang-label": "Langues de l'application :",
+      "app-description": "Easy Pool Settings simplifie l'entretien de l'eau de votre piscine ou spa : entrez vos mesures et obtenez des recommandations de dosage claires en quelques secondes. L'application fonctionne entièrement hors ligne et ne collecte aucune donnée personnelle.",
+      "play-tooltip": "Pas encore disponible sur ce store",
+      "contact-email": "Écrire un courriel",
+      "contact-linkedin": "Profil LinkedIn"
+    },
+    en: {
+      tagline: "I build practical mobile apps that simplify everyday tasks.",
+      "app-lang-label": "App languages:",
+      "app-description": "Easy Pool Settings simplifies pool and spa water maintenance: enter your measurements and get clear dosing recommendations in seconds. The app works entirely offline and collects no personal data.",
+      "play-tooltip": "Not yet available on this store",
+      "contact-email": "Send an email",
+      "contact-linkedin": "LinkedIn profile"
+    }
+  };
+
+  let currentLang = 'fr';
+
+  function setLang(lang) {
+    if (!translations[lang]) return;
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (translations[lang][key]) el.setAttribute('aria-label', translations[lang][key]);
+    });
+
+    document.querySelectorAll('[data-lang-src]').forEach(img => {
+      img.src = img.getAttribute('data-lang-src').replace('{lang}', lang);
+    });
+
+    document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.store-link.disabled.show-tooltip').forEach(el => {
+      if (!el.contains(e.target)) el.classList.remove('show-tooltip');
+    });
+  });
+
+  const browserLang = ((navigator.language || 'fr').slice(0, 2) === 'en') ? 'en' : 'fr';
+  setLang(browserLang);
+</script>
 
 </body>
 </html>
