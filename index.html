@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTCode — Connais Ton Code</title>
+<meta name="description" content="CTCode, le studio de Jean-Bernard Gallo. Découvrez Easy Pool Settings, le calculateur de chimie de piscine et spa disponible sur l'App Store.">
+<style>
+  :root {
+    --bleu-principal: #0A4D8C;
+    --bleu-fonce: #083B6F;
+    --turquoise: #8FDDEE;
+    --texte: #1a1a2e;
+    --texte-doux: #4a5568;
+    --fond-clair: #f4f9fc;
+    --carte: #ffffff;
+    --bordure: #dbe9f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--fond-clair);
+    color: var(--texte);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(180deg, var(--bleu-principal) 0%, var(--bleu-fonce) 100%);
+    color: white;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  header .logo { width: 56px; height: 56px; margin: 0 auto 16px; }
+  header h1 { margin: 0 0 8px; font-size: 2rem; font-weight: 700; letter-spacing: 0.5px; }
+  header p.sub { margin: 0; color: var(--turquoise); font-size: 1rem; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  section { margin-bottom: 56px; }
+
+  .card {
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 16px;
+    padding: 32px 28px;
+  }
+
+  h2 {
+    color: var(--bleu-principal);
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+  }
+  .project-tagline {
+    color: var(--texte-doux);
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+  }
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    object-fit: cover;
+    background: var(--fond-clair);
+  }
+  .app-icon-placeholder {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    background: var(--fond-clair);
+    border: 1px dashed var(--bordure);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    color: var(--texte-doux);
+    text-align: center;
+    padding: 4px;
+  }
+
+  p { margin: 0.9em 0; }
+
+  .screens {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 4px 0 8px;
+    margin: 20px 0;
+  }
+  .screen-frame {
+    flex: 0 0 auto;
+    width: 150px;
+  }
+  .screen-frame img {
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--bordure);
+    display: block;
+    background: var(--fond-clair);
+  }
+  .screen-frame .screen-placeholder {
+    width: 150px;
+    height: 300px;
+    border-radius: 14px;
+    border: 1px dashed var(--bordure);
+    background: var(--fond-clair);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--texte-doux);
+    text-align: center;
+    padding: 8px;
+  }
+
+  .cta {
+    display: inline-block;
+    background: var(--bleu-principal);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 13px 28px;
+    border-radius: 30px;
+    margin-top: 8px;
+    transition: background 0.15s;
+  }
+  .cta:hover { background: var(--bleu-fonce); }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .contact-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--bleu-principal);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .contact-list a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 0.85rem;
+    color: #7a8899;
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 44px 20px 36px; }
+    header h1 { font-size: 1.6rem; }
+    .card { padding: 24px 20px; }
+    .project-header { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 C50 10 78 52 78 68 A28 28 0 1 1 22 68 C22 52 50 10 50 10 Z" fill="#8FDDEE"/>
+  </svg>
+  <h1>CTCode</h1>
+  <p class="sub">Connais Ton Code</p>
+</header>
+
+<main>
+
+  <section id="easy-pool-settings">
+    <div class="card">
+      <div class="project-header">
+        <img class="app-icon" src="assets/easy-pool-settings/icon.png" alt="Icône de l'application Easy Pool Settings"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="app-icon-placeholder">icon.png</div>
+        <div>
+          <h2>Easy Pool Settings</h2>
+          <p class="project-tagline">Calculateur de chimie de piscine et spa — FR / EN / ES</p>
+        </div>
+      </div>
+
+      <p>Easy Pool Settings est une application mobile qui simplifie l'entretien de l'eau de votre piscine ou spa : entrez vos mesures, obtenez des recommandations de dosage claires et gardez un historique de vos tests. Disponible en français, anglais et espagnol, et fonctionne entièrement hors ligne, sans collecte de données.</p>
+
+      <div class="screens">
+        <div class="screen-frame">
+          <img src="assets/easy-pool-settings/screenshot-1.png" alt="Capture d'écran 1 de Easy Pool Settings"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="screen-placeholder">screenshot-1.png</div>
+        </div>
+        <div class="screen-frame">
+          <img src="assets/easy-pool-settings/screenshot-2.png" alt="Capture d'écran 2 de Easy Pool Settings"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="screen-placeholder">screenshot-2.png</div>
+        </div>
+        <div class="screen-frame">
+          <img src="assets/easy-pool-settings/screenshot-3.png" alt="Capture d'écran 3 de Easy Pool Settings"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="screen-placeholder">screenshot-3.png</div>
+        </div>
+      </div>
+
+      <a class="cta" href="https://apps.apple.com/ca/app/easy-pool-settings/id6796893830" target="_blank" rel="noopener">Voir sur l'App Store →</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:kycodesoft@gmail.com">✉️ kycodesoft@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/jeanbernardgallo/" target="_blank" rel="noopener">🔗 Profil LinkedIn</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>© 2026 CTCode — Jean-Bernard Gallo</footer>
+
+</body>
+</html>
