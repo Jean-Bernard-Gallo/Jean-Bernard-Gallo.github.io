@@ -25,36 +25,85 @@
     color: var(--texte);
     line-height: 1.6;
   }
-  header {
-    background: linear-gradient(180deg, var(--bleu-principal) 0%, var(--bleu-fonce) 100%);
-    color: white;
-    padding: 48px 24px 40px;
-    text-align: center;
+
+  /* En-tête */
+  .site-header {
+    background: var(--carte);
+    border-bottom: 1px solid var(--bordure);
+    box-shadow: 0 1px 4px rgba(10, 77, 140, 0.04);
     position: relative;
+    z-index: 2;
   }
+  .site-header-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand .logo { width: 34px; height: 34px; border-radius: 9px; object-fit: contain; display: block; }
+  .brand-name { font-weight: 700; font-size: 1.1rem; color: var(--texte); }
+  .header-actions { display: flex; align-items: center; gap: 14px; }
+
   .lang-switch {
     display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 20px;
+    background: var(--fond-clair);
+    border: 1px solid var(--bordure);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
   }
   .lang-switch button {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.3);
-    color: white;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    background: transparent;
+    border: none;
+    color: var(--texte-doux);
+    padding: 6px 15px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.15s;
+    transition: background 0.15s, color 0.15s;
   }
-  .lang-switch button:hover { background: rgba(255,255,255,0.22); }
-  .lang-switch button.active { background: var(--turquoise); color: var(--bleu-fonce); border-color: var(--turquoise); }
+  .lang-switch button:hover:not(.active) { background: rgba(10, 77, 140, 0.07); }
+  .lang-switch button.active { background: var(--bleu-principal); color: white; }
 
-  header .logo { width: 52px; height: 52px; margin: 0 auto 14px; display: block; border-radius: 14px; object-fit: contain; }
-  header h1 { margin: 0 0 10px; font-size: 2rem; font-weight: 700; letter-spacing: 0.5px; }
-  header p.sub { margin: 0 auto; max-width: 480px; color: var(--turquoise); font-size: 1rem; }
+  .header-icons { display: flex; gap: 8px; }
+  .header-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--fond-clair);
+    border: 1px solid var(--bordure);
+    color: var(--bleu-principal);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .header-icons a svg { width: 17px; height: 17px; }
+  .header-icons a:hover { background: var(--bleu-principal); color: white; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background-color: var(--fond-clair);
+    background-image:
+      linear-gradient(90deg, var(--fond-clair) 0%, var(--fond-clair) 32%, rgba(244,249,252,0.72) 55%, rgba(244,249,252,0.25) 100%),
+      url('assets/main/fond.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, top right;
+    background-size: 100% 100%, 52% auto;
+    padding: 72px 24px 80px;
+  }
+  .hero-inner { max-width: 760px; margin: 0 auto; }
+  .accent-line { display: block; width: 56px; height: 4px; background: var(--bleu-principal); border-radius: 2px; margin-bottom: 22px; }
+  .hero h1 { margin: 0 0 14px; font-size: 2.75rem; font-weight: 800; letter-spacing: -0.5px; color: var(--texte); }
+  .hero .tagline { margin: 0; max-width: 480px; font-size: 1.05rem; color: var(--texte-doux); }
 
   main { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
 
@@ -65,6 +114,7 @@
     border: 1px solid var(--bordure);
     border-radius: 16px;
     padding: 32px 28px;
+    box-shadow: 0 10px 30px rgba(10, 77, 140, 0.07);
   }
 
   h2 {
@@ -106,13 +156,14 @@
   .carousel {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     margin: 20px 0 8px;
   }
   .carousel-viewport {
     overflow: hidden;
     border-radius: 14px;
-    flex: 1;
+    max-width: 300px;
   }
   .carousel-track {
     display: flex;
@@ -229,30 +280,6 @@
     transform: translateX(-50%) translateY(0);
   }
 
-  .contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  .contact-list a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--carte);
-    border: 1px solid var(--bordure);
-    color: var(--bleu-principal);
-    text-decoration: none;
-    transition: background 0.15s, color 0.15s;
-  }
-  .contact-list a svg { width: 20px; height: 20px; }
-  .contact-list a:hover { background: var(--bleu-principal); color: white; }
-
   footer {
     text-align: center;
     padding: 8px 24px 32px;
@@ -267,9 +294,14 @@
     .carousel-slide img { max-width: 300px; }
   }
 
+  @media (max-width: 640px) {
+    .hero { background-image: linear-gradient(90deg, var(--fond-clair), var(--fond-clair)); }
+    .hero h1 { font-size: 2.1rem; }
+  }
+
   @media (max-width: 480px) {
-    header { padding: 40px 20px 32px; }
-    header h1 { font-size: 1.6rem; }
+    .site-header-inner { padding: 12px 20px; }
+    .hero { padding: 56px 20px 64px; }
     .card { padding: 24px 20px; }
     .project-header { flex-wrap: wrap; }
     .stores { width: 100%; }
@@ -279,15 +311,36 @@
 </head>
 <body>
 
-<header>
-  <div class="lang-switch">
-    <button type="button" data-lang-btn="fr" onclick="setLang('fr')">FR</button>
-    <button type="button" data-lang-btn="en" onclick="setLang('en')">EN</button>
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="brand">
+      <img class="logo" src="assets/main/icone.png" alt="Logo CTCode">
+      <span class="brand-name">CTCode</span>
+    </div>
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button type="button" data-lang-btn="fr" onclick="setLang('fr')">FR</button>
+        <button type="button" data-lang-btn="en" onclick="setLang('en')">EN</button>
+      </div>
+      <div class="header-icons">
+        <a href="mailto:kycodesoft@gmail.com" data-i18n-aria="contact-email" aria-label="Écrire un courriel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jeanbernardgallo/" target="_blank" rel="noopener" data-i18n-aria="contact-linkedin" aria-label="Profil LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
-  <img class="logo" src="assets/main/icone.png" alt="Logo CTCode">
-  <h1>CTCode</h1>
-  <p class="sub" data-i18n="tagline">Je conçois des applications mobiles pratiques qui simplifient des tâches du quotidien.</p>
 </header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="accent-line"></span>
+    <h1>CTCode</h1>
+    <p class="tagline" data-i18n="tagline">Je conçois des applications mobiles pratiques qui simplifient des tâches du quotidien.</p>
+  </div>
+</section>
 
 <main>
 
@@ -346,21 +399,6 @@
         <button type="button" class="dot" data-index="5" aria-label="Image 6"></button>
       </div>
     </div>
-  </section>
-
-  <section id="contact">
-    <ul class="contact-list">
-      <li>
-        <a href="mailto:kycodesoft@gmail.com" data-i18n-aria="contact-email" aria-label="Écrire un courriel">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/jeanbernardgallo/" target="_blank" rel="noopener" data-i18n-aria="contact-linkedin" aria-label="Profil LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
-        </a>
-      </li>
-    </ul>
   </section>
 
 </main>
