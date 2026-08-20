@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conditions d'utilisation / Terms of Use / Términos de uso — Easy Pool Settings</title>
+<title>Conditions d'utilisation et politique de confidentialité / Terms of Use and Privacy Policy / Términos de uso y política de privacidad — Easy Pool Settings</title>
 <style>
   :root {
     --bleu-principal: #0A4D8C;
@@ -22,15 +22,23 @@
   .lang-switch button { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.15s; }
   .lang-switch button:hover { background: rgba(255,255,255,0.22); }
   .lang-switch button.active { background: var(--turquoise); color: var(--bleu-fonce); border-color: var(--turquoise); }
+  .section-nav { display: flex; justify-content: center; gap: 18px; margin-top: 14px; }
+  .section-nav a { color: var(--turquoise); font-size: 0.82rem; text-decoration: none; border-bottom: 1px dotted rgba(143,221,238,0.6); }
+  .section-nav a:hover { color: white; }
   main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1.section-title { color: var(--bleu-fonce); font-size: 1.35rem; margin-top: 2.4em; margin-bottom: 0.6em; scroll-margin-top: 24px; }
+  h1.section-title:first-of-type { margin-top: 0.4em; }
   h2 { color: var(--bleu-principal); font-size: 1.1rem; margin-top: 2em; margin-bottom: 0.5em; border-bottom: 2px solid var(--turquoise); padding-bottom: 6px; }
   p { margin: 0.7em 0; }
+  ul { margin: 0.6em 0; padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
   strong.warn { display: block; background: #fff4e5; border-left: 4px solid #d98c00; padding: 12px 16px; border-radius: 6px; margin: 0.9em 0; font-weight: 600; }
   .meta { font-size: 0.9rem; color: #555; margin-bottom: 2em; }
   .contact { background: white; border: 1px solid #dbe9f2; border-radius: 12px; padding: 20px 24px; margin-top: 2.5em; }
   .contact a { color: var(--bleu-principal); font-weight: 600; text-decoration: none; }
   .contact a:hover { text-decoration: underline; }
   .crosslink { display: inline-block; margin-bottom: 24px; color: var(--bleu-principal); font-size: 0.9rem; }
+  hr.sep { border: none; border-top: 1px solid #dbe9f2; margin: 3em 0; }
   footer { text-align: center; padding: 24px; font-size: 0.85rem; color: #7a8899; }
   .lang-content { display: none; }
   .lang-content.active { display: block; }
@@ -42,175 +50,245 @@
   <svg class="drop" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <path d="M50 10 C50 10 78 52 78 68 A28 28 0 1 1 22 68 C22 52 50 10 50 10 Z" fill="#8FDDEE"/>
   </svg>
-  <h1 data-i18n="title">Conditions d'utilisation</h1>
+  <h1 data-i18n="title">Conditions d'utilisation et politique de confidentialité</h1>
   <p class="sub">Easy Pool Settings</p>
   <div class="lang-switch">
     <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
     <button data-lang="en" onclick="setLang('en')">EN</button>
     <button data-lang="es" onclick="setLang('es')">ES</button>
   </div>
+  <div class="section-nav" data-i18n="sectionnav">
+    <a href="#cgu-fr">Conditions d'utilisation</a>
+    <a href="#confidentialite-fr">Politique de confidentialité</a>
+  </div>
 </header>
 
 <main>
-  <a class="crosslink" href="./index.html" data-i18n="crosslink">← Voir la Politique de confidentialité</a>
+  <a class="crosslink" href="./index.html" data-i18n="crosslink">← Voir le résumé de confidentialité</a>
 
   <div class="lang-content active" id="content-fr">
-    <p class="meta">Date d'entrée en vigueur : 2026</p>
-    <p>Les présentes conditions d'utilisation (« Conditions ») régissent votre utilisation de l'application mobile Easy Pool Settings (« l'Application »), éditée par Jean-Bernard Gallo (« l'éditeur », « nous »). En téléchargeant ou en utilisant l'Application, vous acceptez d'être lié par ces Conditions. Si vous n'y consentez pas, n'utilisez pas l'Application.</p>
+    <p class="meta">Dernière mise à jour : 20 août 2026<br>Éditeur : CTCode — Jean-Bernard Gallo, travailleur autonome, Québec, Canada<br>Contact : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
 
-    <h2>1. Acceptation et admissibilité</h2>
-    <p>En utilisant l'Application, vous confirmez : être âgé d'au moins 18 ans ; avoir la capacité légale d'accepter ces Conditions ; respecter ces Conditions et les lois applicables. En raison de la manipulation de produits chimiques pour piscines et spas, qui peut présenter des risques, l'Application est destinée aux personnes de 18 ans et plus.</p>
+    <h1 class="section-title" id="cgu-fr">Conditions générales d'utilisation</h1>
 
-    <h2>2. Nature de l'application</h2>
-    <p>Easy Pool Settings est un outil d'aide et d'information pour l'entretien de l'eau de piscines et de spas. L'Application fonctionne entièrement sur votre appareil : elle ne nécessite pas de compte, et vos données sont stockées localement sur votre appareil uniquement. Nous ne collectons, ne transmettons ni ne stockons aucune de vos données. Pour plus de détails, consultez notre <a href="./index.html">Politique de confidentialité</a>.</p>
+    <h2>1. Objet</h2>
+    <p>Easy Pool Settings (« l'Application ») est une application mobile fournissant des outils d'aide à l'entretien chimique de piscines et spas résidentiels : calculs de correction (pH, alcalinité totale, chlore, stabilisant, sel, dureté calcique), plans d'action, guides éducatifs.</p>
 
-    <h2>3. Achat</h2>
-    <p>L'Application est proposée via l'App Store et le Google Play Store sous forme d'achat unique au prix affiché dans la boutique. Les achats sont traités par Apple ou Google ; toute demande de remboursement doit être adressée directement à la boutique concernée. L'éditeur ne traite aucun paiement et ne peut émettre de remboursement.</p>
+    <h2>2. Avertissement — usage informatif, pas un avis professionnel</h2>
+    <strong class="warn">AVERTISSEMENT : les produits chimiques pour piscines et spas sont des matières dangereuses pouvant causer des blessures graves, des dommages matériels ou la mort en cas de mauvaise manipulation. Ne vous fiez jamais uniquement à l'Application pour manipuler des produits chimiques.</strong>
+    <p>Les recommandations fournies par l'Application sont des estimations basées sur des formules de référence standards de l'industrie et sur les valeurs saisies par l'utilisateur. Elles ne remplacent pas :</p>
+    <ul>
+      <li>Le jugement professionnel d'un spécialiste en entretien de piscine</li>
+      <li>Les instructions du fabricant des produits chimiques utilisés</li>
+      <li>Un second test de vérification avant et après tout ajout de produit</li>
+    </ul>
+    <p>L'utilisateur demeure seul responsable de la manipulation des produits chimiques, de leur dosage réel, et de la vérification des résultats par un test indépendant. CTCode décline toute responsabilité pour tout dommage matériel, corporel ou autre résultant d'une utilisation des recommandations de l'Application sans vérification appropriée.</p>
 
-    <h2>4. Licence et utilisation</h2>
-    <p>Nous vous accordons une licence limitée, non exclusive et non transférable d'utiliser l'Application à des fins personnelles. Vous vous engagez à ne pas copier, modifier, distribuer ou revendre l'Application, effectuer de l'ingénierie inverse, retirer les mentions de propriété, ni l'utiliser à des fins illégales.</p>
+    <h2>3. Licence d'utilisation</h2>
+    <p>CTCode accorde à l'utilisateur une licence personnelle, non exclusive, non transférable, pour l'utilisation de l'Application à des fins personnelles et non commerciales.</p>
 
-    <h2>5. Avertissements — chimie et sécurité</h2>
-    <strong class="warn">IMPORTANT : l'Application fournit des calculs et des recommandations à titre informatif seulement. Elle ne remplace pas les services d'un professionnel qualifié, l'analyse de l'eau par un spécialiste, ni les instructions des fabricants.</strong>
-    <strong class="warn">AVERTISSEMENT : les produits chimiques pour piscines et spas sont des matières dangereuses pouvant causer des blessures graves, des dommages matériels ou la mort en cas de mauvaise manipulation. Ne vous fiez jamais uniquement à l'Application pour manipuler des produits chimiques. Vérifiez toujours les recommandations auprès des instructions du fabricant et consultez un professionnel qualifié en cas de doute.</strong>
-    <p>Vous êtes seul responsable de lire et suivre les instructions et fiches de sécurité des fabricants, porter un équipement de protection approprié, entreposer les produits en sécurité, hors de portée des enfants, ne jamais mélanger différents produits entre eux, et respecter la réglementation locale.</p>
-    <p>Commencez toujours par de plus petites doses que celles recommandées et refaites un test avant d'en ajouter. <strong>Vous utilisez l'Application entièrement à vos propres risques. Nous ne garantissons aucun résultat.</strong></p>
+    <h2>4. Publicités</h2>
+    <p>L'Application affiche des publicités fournies par le service Google AdMob afin de financer son développement continu. Voir la section « Publicités et données » de la Politique de confidentialité ci-dessous pour le détail des données concernées.</p>
 
-    <h2>6. Conformité réglementaire et sécurité</h2>
-    <p>Vous êtes responsable de vous conformer à la réglementation applicable dans votre région. Au Québec, cela inclut notamment le <em>Règlement sur la sécurité des piscines résidentielles</em> et le <em>Règlement sur la qualité de l'eau des piscines et autres bassins artificiels</em>. L'Application peut renvoyer à des ressources officielles à titre informatif, mais ne se substitue pas à ces réglementations.</p>
+    <h2>5. Propriété intellectuelle</h2>
+    <p>L'Application, son code, son design et son contenu sont la propriété de CTCode et sont protégés par les lois applicables sur la propriété intellectuelle.</p>
 
-    <h2>7. Exclusion de garanties</h2>
-    <p>L'Application est fournie « telle quelle » et « selon disponibilité », sans garantie d'aucune sorte, expresse ou implicite, notamment de qualité marchande, d'adéquation à un usage particulier, ou d'exactitude des calculs.</p>
+    <h2>6. Limitation de responsabilité</h2>
+    <p>Dans toute la mesure permise par la loi, CTCode ne pourra être tenu responsable des dommages directs ou indirects résultant de l'utilisation ou de l'incapacité d'utiliser l'Application, incluant sans s'y limiter les dommages liés à un mauvais dosage de produits chimiques, une réaction chimique, un dommage à l'équipement de piscine, ou une blessure.</p>
 
-    <h2>8. Limitation de responsabilité</h2>
-    <p>Dans la mesure permise par la loi, l'éditeur ne pourra être tenu responsable de dommages découlant de votre utilisation de l'Application, de toute manipulation de produits chimiques, ou de toute décision prise sur la base de ses recommandations.</p>
+    <h2>7. Modifications</h2>
+    <p>CTCode se réserve le droit de modifier ces conditions en tout temps. Les modifications importantes seront reflétées par une mise à jour de la date en en-tête de ce document.</p>
 
-    <h2>9. Indemnisation</h2>
-    <p>Vous acceptez d'indemniser l'éditeur à l'égard de toute réclamation découlant de votre violation des présentes Conditions ou de votre utilisation de l'Application.</p>
+    <h2>8. Droit applicable</h2>
+    <p>Ces conditions sont régies par les lois de la province de Québec et les lois fédérales du Canada applicables.</p>
 
-    <h2>10. Propriété intellectuelle</h2>
-    <p>L'Application, son contenu, ses algorithmes et le nom « Easy Pool Settings » demeurent la propriété de l'éditeur.</p>
+    <hr class="sep">
 
-    <h2>11. Droit applicable</h2>
-    <p>Les présentes Conditions sont régies par les lois de la province de Québec et du Canada. Tout litige relèvera des tribunaux compétents du Québec.</p>
+    <h1 class="section-title" id="confidentialite-fr">Politique de confidentialité</h1>
 
-    <h2>12. Modifications</h2>
-    <p>Nous pouvons modifier ces Conditions à tout moment ; votre utilisation continue de l'Application vaut acceptation des modifications.</p>
+    <h2>1. Données collectées</h2>
+    <p><em>Directement par l'Application :</em></p>
+    <ul>
+      <li>Aucune donnée personnelle n'est requise pour utiliser l'Application (pas de création de compte).</li>
+      <li>Les données de test d'eau, l'historique de piscines/spas et les préférences sont stockées <strong>localement sur l'appareil</strong> de l'utilisateur. Elles ne sont pas transmises à CTCode.</li>
+    </ul>
+    <p><em>Via les publicités (Google AdMob) :</em></p>
+    <ul>
+      <li>L'Application utilise Google AdMob pour afficher des publicités. AdMob peut collecter et traiter, via l'appareil de l'utilisateur : un identifiant publicitaire (IDFA sur iOS, GAID sur Android), l'adresse IP approximative, des données techniques sur l'appareil, et des données d'interaction avec les publicités.</li>
+      <li>Ces données sont traitées par Google conformément à sa propre politique de confidentialité (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>) et peuvent servir à personnaliser les publicités affichées, sauf refus de l'utilisateur via les réglages de son appareil (ex. « Limiter le suivi des annonces » sur iOS).</li>
+      <li>CTCode n'a pas accès direct à ces données individuelles ; il reçoit uniquement des statistiques agrégées de performance publicitaire de la part de Google.</li>
+    </ul>
 
-    <h2>13. Dispositions relatives à Apple et Google</h2>
-    <p>Les présentes Conditions vous lient à l'éditeur uniquement, et non à Apple ou Google. Apple et ses filiales sont des tiers bénéficiaires des présentes Conditions.</p>
+    <h2>2. Finalité du traitement</h2>
+    <p>Les seules données traitées en lien avec l'utilisation de l'Application servent à : (a) le fonctionnement des calculs et fonctionnalités de l'Application (traitement local, aucune transmission), et (b) l'affichage et la mesure de performance des publicités (via AdMob, tel que décrit ci-dessus).</p>
+
+    <h2>3. Partage de données</h2>
+    <p>CTCode ne vend ni ne partage aucune donnée personnelle à des tiers, à l'exception du partage inhérent au fonctionnement du service publicitaire Google AdMob décrit ci-dessus.</p>
+
+    <h2>4. Droits de l'utilisateur</h2>
+    <p>L'utilisateur peut à tout moment :</p>
+    <ul>
+      <li>Limiter le suivi publicitaire via les réglages de son appareil (iOS : Réglages > Confidentialité > Publicité > Limiter le suivi des annonces ; Android : réglages Google > Annonces > Désactiver la personnalisation)</li>
+      <li>Supprimer l'Application, ce qui efface l'ensemble des données stockées localement</li>
+    </ul>
+
+    <h2>5. Conservation des données</h2>
+    <p>Les données locales (historique de test, piscines enregistrées) sont conservées sur l'appareil jusqu'à suppression manuelle par l'utilisateur ou désinstallation de l'Application.</p>
 
     <div class="contact">
-      <strong>14. Contact</strong>
-      <p style="margin-bottom:0;">Pour toute question : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+      <strong>6. Contact</strong>
+      <p style="margin-bottom:0;">Pour toute question relative à ces conditions ou à cette politique : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
     </div>
-    <p style="margin-top:2em; font-style:italic; color:#555;">En utilisant Easy Pool Settings, vous reconnaissez avoir lu, compris et accepté les présentes Conditions d'utilisation.</p>
   </div>
 
   <div class="lang-content" id="content-en">
-    <p class="meta">Effective date: 2026</p>
-    <p>These terms of use ("Terms") govern your use of the Easy Pool Settings mobile application (the "App"), published by Jean-Bernard Gallo ("the publisher", "we"). By downloading or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+    <p class="meta">Last updated: August 20, 2026<br>Publisher: CTCode — Jean-Bernard Gallo, self-employed, Quebec, Canada<br>Contact: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
 
-    <h2>1. Acceptance and eligibility</h2>
-    <p>By using the App, you confirm that you are at least 18 years old, have the legal capacity to accept these Terms, and will comply with these Terms and applicable laws. Because of the handling of pool and spa chemicals, which may present risks, the App is intended for people aged 18 and over.</p>
+    <h1 class="section-title" id="cgu-en">Terms of Service</h1>
 
-    <h2>2. Nature of the app</h2>
-    <p>Easy Pool Settings is a help and information tool for pool and spa water maintenance. The App works entirely on your device: it requires no account, and your data is stored locally on your device only. We do not collect, transmit, or store any of your data. See our <a href="./index.html">Privacy Policy</a> for details.</p>
+    <h2>1. Purpose</h2>
+    <p>Easy Pool Settings ("the App") is a mobile application providing tools to help maintain the water chemistry of residential pools and spas: correction calculations (pH, total alkalinity, chlorine, stabilizer, salt, calcium hardness), action plans, and educational guides.</p>
 
-    <h2>3. Purchase</h2>
-    <p>The App is offered via the App Store and Google Play Store as a one-time purchase at the price shown in the store. Purchases are processed by Apple or Google; any refund request must be addressed directly to the relevant store. The publisher does not process payments or issue refunds.</p>
+    <h2>2. Disclaimer — informational use only, not professional advice</h2>
+    <strong class="warn">WARNING: Pool and spa chemicals are hazardous materials that can cause serious injury, property damage, or death if mishandled. Never rely solely on the App to handle chemicals.</strong>
+    <p>Recommendations provided by the App are estimates based on standard industry reference formulas and on values entered by the user. They do not replace:</p>
+    <ul>
+      <li>The professional judgment of a pool maintenance specialist</li>
+      <li>The instructions of the manufacturer of the chemical products used</li>
+      <li>A follow-up verification test before and after adding any product</li>
+    </ul>
+    <p>The user remains solely responsible for the handling of chemical products, their actual dosage, and verifying results with an independent test. CTCode disclaims all liability for any property damage, personal injury, or other harm resulting from use of the App's recommendations without proper verification.</p>
 
-    <h2>4. License and use</h2>
-    <p>We grant you a limited, non-exclusive, non-transferable license to use the App for personal purposes. You agree not to copy, modify, distribute or resell the App, reverse-engineer it, remove ownership notices, or use it for unlawful purposes.</p>
+    <h2>3. License</h2>
+    <p>CTCode grants the user a personal, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes.</p>
 
-    <h2>5. Warnings — chemistry and safety</h2>
-    <strong class="warn">IMPORTANT: The App provides calculations and recommendations for informational purposes only. It does not replace the services of a qualified professional, water analysis by a specialist, or manufacturer instructions.</strong>
-    <strong class="warn">WARNING: Pool and spa chemicals are hazardous materials that can cause serious injury, property damage, or death if mishandled. Never rely solely on the App to handle chemicals. Always verify recommendations against manufacturer instructions and consult a qualified professional if in doubt.</strong>
-    <p>You are solely responsible for reading and following manufacturer instructions and safety data sheets, wearing appropriate protective equipment, storing products safely out of reach of children, never mixing different products together, and complying with local regulations.</p>
-    <p>Always start with smaller doses than recommended and retest before adding more. <strong>You use the App entirely at your own risk. We make no guarantee of results.</strong></p>
+    <h2>4. Advertising</h2>
+    <p>The App displays advertisements provided by Google AdMob to help fund its ongoing development. See the "Advertising and data" section of the Privacy Policy below for details on the data involved.</p>
 
-    <h2>6. Regulatory compliance and safety</h2>
-    <p>You are responsible for complying with the regulations applicable in your area. In Quebec, this includes the <em>Regulation respecting the safety of residential swimming pools</em> and the <em>Regulation respecting water quality in swimming pools</em>. The App may reference official resources for information purposes, but does not replace these regulations.</p>
+    <h2>5. Intellectual property</h2>
+    <p>The App, its code, design, and content are the property of CTCode and are protected by applicable intellectual property laws.</p>
 
-    <h2>7. Disclaimer of warranties</h2>
-    <p>The App is provided "as is" and "as available," without warranty of any kind, express or implied, including merchantability, fitness for a particular purpose, or accuracy of calculations.</p>
+    <h2>6. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, CTCode shall not be liable for any direct or indirect damages resulting from the use or inability to use the App, including but not limited to damages related to incorrect chemical dosing, chemical reactions, damage to pool equipment, or injury.</p>
 
-    <h2>8. Limitation of liability</h2>
-    <p>To the extent permitted by law, the publisher shall not be liable for damages arising from your use of the App, any handling of chemicals, or any decision made based on its recommendations.</p>
+    <h2>7. Changes</h2>
+    <p>CTCode reserves the right to modify these terms at any time. Material changes will be reflected by an updated date at the top of this document.</p>
 
-    <h2>9. Indemnification</h2>
-    <p>You agree to indemnify the publisher against any claim arising from your breach of these Terms or your use of the App.</p>
+    <h2>8. Governing law</h2>
+    <p>These terms are governed by the laws of the Province of Quebec and applicable federal laws of Canada.</p>
 
-    <h2>10. Intellectual property</h2>
-    <p>The App, its content, algorithms, and the name "Easy Pool Settings" remain the property of the publisher.</p>
+    <hr class="sep">
 
-    <h2>11. Governing law</h2>
-    <p>These Terms are governed by the laws of the Province of Quebec and Canada. Any dispute shall be subject to the competent courts of Quebec.</p>
+    <h1 class="section-title" id="confidentialite-en">Privacy Policy</h1>
 
-    <h2>12. Changes</h2>
-    <p>We may modify these Terms at any time; your continued use of the App constitutes acceptance of the changes.</p>
+    <h2>1. Data collected</h2>
+    <p><em>Directly by the App:</em></p>
+    <ul>
+      <li>No personal data is required to use the App (no account creation).</li>
+      <li>Water test data, saved pools/spas, and preferences are stored <strong>locally on the user's device</strong>. This data is not transmitted to CTCode.</li>
+    </ul>
+    <p><em>Via advertising (Google AdMob):</em></p>
+    <ul>
+      <li>The App uses Google AdMob to display ads. AdMob may collect and process, via the user's device: an advertising identifier (IDFA on iOS, GAID on Android), approximate IP address, technical device data, and ad interaction data.</li>
+      <li>This data is processed by Google in accordance with its own privacy policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>) and may be used to personalize ads shown, unless the user opts out via their device settings (e.g., "Limit Ad Tracking" on iOS).</li>
+      <li>CTCode does not have direct access to this individual-level data; it only receives aggregated advertising performance statistics from Google.</li>
+    </ul>
 
-    <h2>13. Apple and Google provisions</h2>
-    <p>These Terms bind you to the publisher only, not to Apple or Google. Apple and its subsidiaries are third-party beneficiaries of these Terms.</p>
+    <h2>2. Purpose of processing</h2>
+    <p>The only data processed in connection with the App's use serves to: (a) power the App's calculations and features (processed locally, no transmission), and (b) display and measure ad performance (via AdMob, as described above).</p>
+
+    <h2>3. Data sharing</h2>
+    <p>CTCode does not sell or share any personal data with third parties, except for the sharing inherent to the operation of the Google AdMob advertising service described above.</p>
+
+    <h2>4. User rights</h2>
+    <p>The user may at any time:</p>
+    <ul>
+      <li>Limit ad tracking via their device settings (iOS: Settings > Privacy > Advertising > Limit Ad Tracking; Android: Google settings > Ads > Opt out of Ads Personalization)</li>
+      <li>Delete the App, which erases all locally stored data</li>
+    </ul>
+
+    <h2>5. Data retention</h2>
+    <p>Local data (test history, saved pools) is retained on the device until manually deleted by the user or the App is uninstalled.</p>
 
     <div class="contact">
-      <strong>14. Contact</strong>
-      <p style="margin-bottom:0;">For any question: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+      <strong>6. Contact</strong>
+      <p style="margin-bottom:0;">For any question about these terms or this policy: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
     </div>
-    <p style="margin-top:2em; font-style:italic; color:#555;">By using Easy Pool Settings, you acknowledge that you have read, understood, and accepted these Terms of Use.</p>
   </div>
 
   <div class="lang-content" id="content-es">
-    <p class="meta">Fecha de entrada en vigor: 2026</p>
-    <p>Los presentes términos de uso («Términos») rigen su utilización de la aplicación móvil Easy Pool Settings (la «Aplicación»), publicada por Jean-Bernard Gallo («el editor», «nosotros»). Al descargar o utilizar la Aplicación, usted acepta quedar vinculado por estos Términos. Si no está de acuerdo, no utilice la Aplicación.</p>
+    <p class="meta">Última actualización: 20 de agosto de 2026<br>Editor: CTCode — Jean-Bernard Gallo, trabajador autónomo, Quebec, Canadá<br>Contacto: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
 
-    <h2>1. Aceptación y elegibilidad</h2>
-    <p>Al utilizar la Aplicación, usted confirma que tiene al menos 18 años, que tiene la capacidad legal para aceptar estos Términos, y que cumplirá con estos Términos y las leyes aplicables. Debido a la manipulación de productos químicos para piscinas y spas, que puede presentar riesgos, la Aplicación está destinada a personas mayores de 18 años.</p>
+    <h1 class="section-title" id="cgu-es">Términos de servicio</h1>
 
-    <h2>2. Naturaleza de la aplicación</h2>
-    <p>Easy Pool Settings es una herramienta de ayuda e información para el mantenimiento del agua de piscinas y spas. La Aplicación funciona completamente en su dispositivo: no requiere cuenta, y sus datos se almacenan únicamente en su dispositivo. No recopilamos, transmitimos ni almacenamos ninguno de sus datos. Consulte nuestra <a href="./index.html">Política de privacidad</a> para más detalles.</p>
+    <h2>1. Objeto</h2>
+    <p>Easy Pool Settings ("la Aplicación") es una aplicación móvil que proporciona herramientas de ayuda para el mantenimiento químico de piscinas y spas residenciales: cálculos de corrección (pH, alcalinidad total, cloro, estabilizante, sal, dureza cálcica), planes de acción y guías educativas.</p>
 
-    <h2>3. Compra</h2>
-    <p>La Aplicación se ofrece a través de App Store y Google Play Store como una compra única al precio indicado en la tienda. Las compras son procesadas por Apple o Google; cualquier solicitud de reembolso debe dirigirse directamente a la tienda correspondiente. El editor no procesa pagos ni emite reembolsos.</p>
+    <h2>2. Aviso — uso informativo, no un consejo profesional</h2>
+    <strong class="warn">ADVERTENCIA: Los productos químicos para piscinas y spas son materiales peligrosos que pueden causar lesiones graves, daños materiales o la muerte si se manipulan incorrectamente. Nunca confíe únicamente en la Aplicación para manipular productos químicos.</strong>
+    <p>Las recomendaciones proporcionadas por la Aplicación son estimaciones basadas en fórmulas de referencia estándar de la industria y en los valores ingresados por el usuario. No reemplazan:</p>
+    <ul>
+      <li>El criterio profesional de un especialista en mantenimiento de piscinas</li>
+      <li>Las instrucciones del fabricante de los productos químicos utilizados</li>
+      <li>Una prueba de verificación posterior antes y después de agregar cualquier producto</li>
+    </ul>
+    <p>El usuario sigue siendo el único responsable del manejo de los productos químicos, de su dosificación real y de la verificación de los resultados mediante una prueba independiente. CTCode declina toda responsabilidad por cualquier daño material, corporal u otro resultante del uso de las recomendaciones de la Aplicación sin la verificación adecuada.</p>
 
-    <h2>4. Licencia y uso</h2>
-    <p>Le otorgamos una licencia limitada, no exclusiva e intransferible para utilizar la Aplicación con fines personales. Usted se compromete a no copiar, modificar, distribuir o revender la Aplicación, realizar ingeniería inversa, eliminar avisos de propiedad, ni utilizarla con fines ilegales.</p>
+    <h2>3. Licencia</h2>
+    <p>CTCode otorga al usuario una licencia personal, no exclusiva e intransferible para usar la Aplicación con fines personales y no comerciales.</p>
 
-    <h2>5. Advertencias — química y seguridad</h2>
-    <strong class="warn">IMPORTANTE: La Aplicación proporciona cálculos y recomendaciones únicamente con fines informativos. No sustituye los servicios de un profesional calificado, el análisis del agua por un especialista, ni las instrucciones del fabricante.</strong>
-    <strong class="warn">ADVERTENCIA: Los productos químicos para piscinas y spas son materiales peligrosos que pueden causar lesiones graves, daños materiales o la muerte si se manipulan incorrectamente. Nunca confíe únicamente en la Aplicación para manipular productos químicos. Verifique siempre las recomendaciones con las instrucciones del fabricante y consulte a un profesional calificado en caso de duda.</strong>
-    <p>Usted es el único responsable de leer y seguir las instrucciones y fichas de seguridad del fabricante, usar equipo de protección adecuado, almacenar los productos de forma segura fuera del alcance de los niños, nunca mezclar diferentes productos entre sí, y cumplir con la normativa local.</p>
-    <p>Comience siempre con dosis más pequeñas que las recomendadas y vuelva a analizar antes de añadir más. <strong>Usted utiliza la Aplicación bajo su entera responsabilidad. No garantizamos ningún resultado.</strong></p>
+    <h2>4. Publicidad</h2>
+    <p>La Aplicación muestra anuncios proporcionados por Google AdMob para ayudar a financiar su desarrollo continuo. Consulte la sección "Publicidad y datos" de la Política de privacidad a continuación para obtener detalles sobre los datos involucrados.</p>
 
-    <h2>6. Cumplimiento normativo y seguridad</h2>
-    <p>Usted es responsable de cumplir con la normativa aplicable en su región. En Quebec, esto incluye el <em>Reglamento sobre la seguridad de las piscinas residenciales</em> y el <em>Reglamento sobre la calidad del agua de las piscinas</em>. La Aplicación puede remitir a recursos oficiales con fines informativos, pero no sustituye dicha normativa.</p>
+    <h2>5. Propiedad intelectual</h2>
+    <p>La Aplicación, su código, diseño y contenido son propiedad de CTCode y están protegidos por las leyes de propiedad intelectual aplicables.</p>
 
-    <h2>7. Exclusión de garantías</h2>
-    <p>La Aplicación se proporciona «tal cual» y «según disponibilidad», sin garantía de ningún tipo, expresa o implícita, incluyendo comerciabilidad, idoneidad para un propósito particular, o exactitud de los cálculos.</p>
+    <h2>6. Limitación de responsabilidad</h2>
+    <p>En la máxima medida permitida por la ley, CTCode no será responsable de ningún daño directo o indirecto resultante del uso o la imposibilidad de usar la Aplicación, incluidos, entre otros, los daños relacionados con una dosificación química incorrecta, una reacción química, daños al equipo de la piscina o lesiones.</p>
 
-    <h2>8. Limitación de responsabilidad</h2>
-    <p>En la medida permitida por la ley, el editor no será responsable de los daños derivados de su uso de la Aplicación, de cualquier manipulación de productos químicos, o de cualquier decisión tomada con base en sus recomendaciones.</p>
+    <h2>7. Cambios</h2>
+    <p>CTCode se reserva el derecho de modificar estos términos en cualquier momento. Los cambios importantes se reflejarán mediante una fecha actualizada en la parte superior de este documento.</p>
 
-    <h2>9. Indemnización</h2>
-    <p>Usted acepta indemnizar al editor frente a cualquier reclamación derivada de su incumplimiento de estos Términos o de su uso de la Aplicación.</p>
+    <h2>8. Ley aplicable</h2>
+    <p>Estos términos se rigen por las leyes de la provincia de Quebec y las leyes federales aplicables de Canadá.</p>
 
-    <h2>10. Propiedad intelectual</h2>
-    <p>La Aplicación, su contenido, sus algoritmos y el nombre «Easy Pool Settings» siguen siendo propiedad del editor.</p>
+    <hr class="sep">
 
-    <h2>11. Ley aplicable</h2>
-    <p>Estos Términos se rigen por las leyes de la provincia de Quebec y de Canadá. Cualquier disputa estará sujeta a los tribunales competentes de Quebec.</p>
+    <h1 class="section-title" id="confidentialite-es">Política de privacidad</h1>
 
-    <h2>12. Modificaciones</h2>
-    <p>Podemos modificar estos Términos en cualquier momento; su uso continuado de la Aplicación constituye la aceptación de los cambios.</p>
+    <h2>1. Datos recopilados</h2>
+    <p><em>Directamente por la Aplicación:</em></p>
+    <ul>
+      <li>No se requieren datos personales para usar la Aplicación (no es necesario crear una cuenta).</li>
+      <li>Los datos de las pruebas de agua, las piscinas/spas guardados y las preferencias se almacenan <strong>localmente en el dispositivo</strong> del usuario. Estos datos no se transmiten a CTCode.</li>
+    </ul>
+    <p><em>A través de la publicidad (Google AdMob):</em></p>
+    <ul>
+      <li>La Aplicación utiliza Google AdMob para mostrar anuncios. AdMob puede recopilar y procesar, a través del dispositivo del usuario: un identificador publicitario (IDFA en iOS, GAID en Android), la dirección IP aproximada, datos técnicos del dispositivo y datos de interacción con los anuncios.</li>
+      <li>Estos datos son procesados por Google de acuerdo con su propia política de privacidad (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>) y pueden utilizarse para personalizar los anuncios mostrados, a menos que el usuario opte por no participar a través de la configuración de su dispositivo (por ejemplo, "Limitar seguimiento de anuncios" en iOS).</li>
+      <li>CTCode no tiene acceso directo a estos datos individuales; solo recibe estadísticas agregadas de rendimiento publicitario por parte de Google.</li>
+    </ul>
 
-    <h2>13. Disposiciones relativas a Apple y Google</h2>
-    <p>Estos Términos le vinculan únicamente con el editor, no con Apple o Google. Apple y sus filiales son terceros beneficiarios de estos Términos.</p>
+    <h2>2. Finalidad del tratamiento</h2>
+    <p>Los únicos datos tratados en relación con el uso de la Aplicación sirven para: (a) el funcionamiento de los cálculos y las funciones de la Aplicación (procesamiento local, sin transmisión), y (b) la visualización y medición del rendimiento publicitario (a través de AdMob, como se describe anteriormente).</p>
+
+    <h2>3. Compartición de datos</h2>
+    <p>CTCode no vende ni comparte ningún dato personal con terceros, salvo la compartición inherente al funcionamiento del servicio publicitario Google AdMob descrito anteriormente.</p>
+
+    <h2>4. Derechos del usuario</h2>
+    <p>El usuario puede en cualquier momento:</p>
+    <ul>
+      <li>Limitar el seguimiento publicitario a través de la configuración de su dispositivo (iOS: Ajustes > Privacidad > Publicidad > Limitar seguimiento de anuncios; Android: configuración de Google > Anuncios > Inhabilitar la personalización de anuncios)</li>
+      <li>Eliminar la Aplicación, lo que borra todos los datos almacenados localmente</li>
+    </ul>
+
+    <h2>5. Conservación de datos</h2>
+    <p>Los datos locales (historial de pruebas, piscinas guardadas) se conservan en el dispositivo hasta su eliminación manual por parte del usuario o la desinstalación de la Aplicación.</p>
 
     <div class="contact">
-      <strong>14. Contacto</strong>
-      <p style="margin-bottom:0;">Para cualquier pregunta: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+      <strong>6. Contacto</strong>
+      <p style="margin-bottom:0;">Para cualquier pregunta sobre estos términos o esta política: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
     </div>
-    <p style="margin-top:2em; font-style:italic; color:#555;">Al utilizar Easy Pool Settings, usted reconoce haber leído, comprendido y aceptado estos Términos de uso.</p>
   </div>
 
 </main>
@@ -218,8 +296,17 @@
 <footer>© 2026 Jean-Bernard Gallo — Easy Pool Settings</footer>
 
 <script>
-  const titles = { fr: "Conditions d'utilisation", en: "Terms of Use", es: "Términos de uso" };
-  const crosslinks = { fr: "← Voir la Politique de confidentialité", en: "← View Privacy Policy", es: "← Ver la Política de privacidad" };
+  const titles = {
+    fr: "Conditions d'utilisation et politique de confidentialité",
+    en: "Terms of Use and Privacy Policy",
+    es: "Términos de uso y política de privacidad"
+  };
+  const crosslinks = { fr: "← Voir le résumé de confidentialité", en: "← View privacy summary", es: "← Ver el resumen de privacidad" };
+  const navLabels = {
+    fr: ["Conditions d'utilisation", "Politique de confidentialité"],
+    en: ["Terms of Service", "Privacy Policy"],
+    es: ["Términos de servicio", "Política de privacidad"]
+  };
   function setLang(lang) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
     document.getElementById('content-' + lang).classList.add('active');
@@ -227,6 +314,11 @@
     document.querySelector('.lang-switch button[data-lang="' + lang + '"]').classList.add('active');
     document.querySelector('[data-i18n="title"]').textContent = titles[lang];
     document.querySelector('[data-i18n="crosslink"]').textContent = crosslinks[lang];
+    const navLinks = document.querySelectorAll('.section-nav a');
+    navLinks[0].textContent = navLabels[lang][0];
+    navLinks[0].href = '#cgu-' + lang;
+    navLinks[1].textContent = navLabels[lang][1];
+    navLinks[1].href = '#confidentialite-' + lang;
     document.documentElement.lang = lang;
     localStorage.setItem('eps-lang', lang);
   }
