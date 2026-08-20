@@ -119,20 +119,20 @@
   .card {
     background: var(--carte);
     border: 1px solid var(--bordure);
-    border-radius: 16px;
-    padding: 32px 28px;
+    border-radius: 12px;
+    padding: 24px 21px;
     box-shadow: 0 10px 30px rgba(10, 77, 140, 0.07);
   }
 
   h2 {
     color: var(--bleu-principal);
-    font-size: 1.4rem;
-    margin: 0 0 4px;
+    font-size: 1.05rem;
+    margin: 0 0 3px;
   }
   .project-tagline {
     color: var(--texte-doux);
-    font-size: 0.95rem;
-    margin: 0 0 20px;
+    font-size: 0.71rem;
+    margin: 0 0 15px;
   }
   .project-tagline strong { color: var(--texte); }
   .project-header {
@@ -140,37 +140,38 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
   }
   .project-identity {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
   }
   .app-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 16px;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
     flex-shrink: 0;
     object-fit: cover;
     background: var(--fond-clair);
   }
 
   p { margin: 0.9em 0; }
+  .card > p { font-size: 0.75rem; }
 
   /* Carrousel de captures d'écran */
   .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin: 20px 0 8px;
+    gap: 6px;
+    margin: 15px 0 6px;
   }
   .carousel-viewport {
     overflow: hidden;
-    border-radius: 14px;
-    max-width: 300px;
+    border-radius: 11px;
+    max-width: 225px;
   }
   .carousel-track {
     display: flex;
@@ -183,22 +184,22 @@
   }
   .carousel-slide img {
     width: 100%;
-    max-width: 240px;
+    max-width: 180px;
     height: auto;
-    border-radius: 14px;
+    border-radius: 11px;
     border: 1px solid var(--bordure);
     display: block;
     background: var(--fond-clair);
   }
   .carousel-arrow {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
+    width: 27px;
+    height: 27px;
     border-radius: 50%;
     background: var(--carte);
     border: 1px solid var(--bordure);
     color: var(--bleu-principal);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     line-height: 1;
     display: flex;
     align-items: center;
@@ -211,12 +212,12 @@
   .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin: 12px 0 20px;
+    gap: 6px;
+    margin: 9px 0 15px;
   }
   .dot {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     padding: 0;
     border: none;
     border-radius: 50%;
@@ -298,7 +299,7 @@
   }
 
   @media (min-width: 600px) {
-    .carousel-slide img { max-width: 300px; }
+    .carousel-slide img { max-width: 225px; }
   }
 
   @media (max-width: 640px) {
@@ -312,7 +313,7 @@
   @media (max-width: 480px) {
     .site-header-inner { padding: 12px 20px; }
     .hero { padding: 16px 20px 16px; }
-    .card { padding: 24px 20px; }
+    .card { padding: 18px 15px; }
     .project-header { flex-wrap: wrap; }
     .stores { width: 100%; }
     .store-badge { flex: 1 1 auto; justify-content: center; }
