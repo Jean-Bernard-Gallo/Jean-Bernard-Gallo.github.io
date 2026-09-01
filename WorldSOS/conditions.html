@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorldSOS — Conditions d'utilisation / Terms of Use / Términos de uso</title>
+<style>
+  :root{
+    --blue:#3E7089;
+    --blue-dark:#2C5468;
+    --cream:#F8F4EA;
+    --cream-dark:#EFE7D6;
+    --red:#D7263D;
+    --text:#2B2B28;
+    --muted:#6B6B63;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  header{
+    background:var(--blue);
+    color:#fff;
+    padding:28px 20px 22px;
+  }
+  .header-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo{width:36px;height:36px;flex:none;}
+  header h1{
+    font-size:1.3rem;
+    margin:0;
+    font-weight:700;
+    letter-spacing:0.2px;
+  }
+  nav.langs{
+    max-width:var(--maxw);
+    margin:16px auto 0;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .lang-pills{
+    display:flex;
+    gap:6px;
+    background:var(--cream-dark);
+    padding:4px;
+    border-radius:999px;
+  }
+  .lang-pills button{
+    border:none;
+    background:transparent;
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--muted);
+    cursor:pointer;
+  }
+  .lang-pills button.active{
+    background:var(--blue);
+    color:#fff;
+  }
+  .other-doc a{
+    color:var(--blue-dark);
+    font-size:0.9rem;
+    font-weight:600;
+    text-decoration:none;
+  }
+  .other-doc a:hover{text-decoration:underline;}
+  main{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:24px 20px 60px;
+  }
+  .updated{
+    color:var(--muted);
+    font-size:0.9rem;
+    margin-bottom:22px;
+  }
+  .summary{
+    background:#fff;
+    border:1px solid var(--cream-dark);
+    border-left:4px solid var(--blue);
+    border-radius:8px;
+    padding:14px 18px;
+    margin-bottom:26px;
+    font-size:0.98rem;
+  }
+  h2{
+    font-size:1.05rem;
+    margin-top:34px;
+    margin-bottom:8px;
+    color:var(--blue-dark);
+  }
+  p{margin:0 0 12px;}
+  a{color:var(--blue-dark);}
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:0.85rem;
+    padding:30px 20px 40px;
+  }
+  [data-lang]{display:none;}
+  [data-lang].active-lang{display:block;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <svg class="logo" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+      <path d="M512 120 L800 235 L800 470 C800 685 660 838 512 905
+               C364 838 224 685 224 470 L224 235 Z" fill="#F8F1E4"/>
+      <g>
+        <circle cx="512" cy="470" r="230" fill="none" stroke="#D7263D" stroke-width="20"/>
+        <ellipse cx="512" cy="470" rx="92" ry="230" fill="none" stroke="#D7263D" stroke-width="16"/>
+        <ellipse cx="512" cy="470" rx="230" ry="92" fill="none" stroke="#D7263D" stroke-width="16"/>
+        <line x1="282" y1="470" x2="742" y2="470" stroke="#D7263D" stroke-width="16"/>
+        <line x1="512" y1="240" x2="512" y2="700" stroke="#D7263D" stroke-width="16"/>
+      </g>
+    </svg>
+    <h1>WorldSOS</h1>
+  </div>
+</header>
+
+<nav class="langs">
+  <div class="lang-pills">
+    <button data-setlang="fr">FR</button>
+    <button data-setlang="en">EN</button>
+    <button data-setlang="es">ES</button>
+  </div>
+  <div class="other-doc">
+    <span data-lang="fr">
+      <a href="index.html">Politique de confidentialité →</a>
+    </span>
+    <span data-lang="en">
+      <a href="index.html">Privacy Policy →</a>
+    </span>
+    <span data-lang="es">
+      <a href="index.html">Política de privacidad →</a>
+    </span>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================= FRANÇAIS ================= -->
+<div data-lang="fr">
+  <h1 style="font-size:1.4rem;margin-top:10px;">Conditions d'utilisation</h1>
+  <p class="updated">Dernière mise à jour : 1er septembre 2026</p>
+
+  <p>Bienvenue sur WorldSOS. Les présentes conditions d'utilisation
+  ("Conditions") régissent votre utilisation de l'application mobile
+  WorldSOS ("l'Application"), éditée par CTCode - Connais Ton Code
+  ("nous", "notre"). En installant ou en utilisant l'Application, vous
+  acceptez ces Conditions.</p>
+
+  <h2>1. Objet de l'Application</h2>
+  <p>WorldSOS est un outil d'information qui affiche des numéros d'urgence
+  locaux (police, pompiers, ambulance, centre antipoison, ligne de crise,
+  aide aux victimes de violence conjugale, protection de l'enfance) en
+  fonction du pays et, pour les États-Unis et le Canada, de l'état/la
+  province/le territoire détecté ou sélectionné par l'utilisateur.
+  L'Application fonctionne entièrement hors ligne.</p>
+
+  <h2>2. Ce que WorldSOS n'est pas</h2>
+  <p><strong>WorldSOS n'est pas un service d'urgence</strong> et n'est affilié à
+  aucun service d'urgence gouvernemental. L'Application ne transmet aucun
+  appel, alerte ou message aux services d'urgence. En cas d'urgence
+  réelle, composez directement le numéro affiché en utilisant votre
+  téléphone. L'Application est un annuaire, pas un intermédiaire.</p>
+
+  <h2>3. Exactitude des informations</h2>
+  <p>Nous nous efforçons de maintenir à jour les numéros affichés à partir
+  de sources publiques et officielles, mais <strong>nous ne pouvons pas
+  garantir qu'ils sont exacts, complets ou à jour en permanence</strong> :
+  les numéros d'urgence peuvent changer sans préavis selon les pays et les
+  juridictions. Vérifiez toujours, si possible, auprès d'une source locale
+  officielle. WorldSOS est fourni à titre informatif et ne remplace en
+  aucun cas votre jugement ou les instructions des autorités locales.</p>
+
+  <h2>4. Fonction "Contact d'urgence"</h2>
+  <p>L'Application vous permet d'enregistrer localement, sur votre
+  appareil, les coordonnées d'un contact de confiance. Les boutons
+  "Message texte" et "Email" ouvrent votre application native de
+  messagerie/email avec un message pré-rempli — <strong>c'est votre
+  téléphone, via vos propres applications, qui envoie effectivement le
+  message</strong>, pas WorldSOS. L'envoi peut échouer pour toute raison
+  hors de notre contrôle (pas de réseau, application non installée,
+  etc.).</p>
+
+  <h2>5. Localisation GPS</h2>
+  <p>L'Application utilise la position GPS de votre appareil, <strong>traitée
+  entièrement sur l'appareil</strong>, pour déterminer automatiquement
+  votre pays et, pour les États-Unis et le Canada, votre état/province/
+  territoire. Vous pouvez refuser l'accès à la localisation et
+  sélectionner votre pays manuellement.</p>
+
+  <h2>6. Âge minimum</h2>
+  <p>L'Application est un outil d'information générale utilisable par tout
+  public, y compris les mineurs souhaitant accéder rapidement à des
+  numéros d'urgence. Elle ne collecte pas sciemment de données
+  personnelles concernant des mineurs (voir la Politique de
+  confidentialité).</p>
+
+  <h2>7. Limitation de responsabilité</h2>
+  <p>Dans toute la mesure permise par la loi applicable, CTCode - Connais
+  Ton Code ne pourra être tenu responsable des dommages directs ou
+  indirects résultant de l'utilisation ou de l'impossibilité d'utiliser
+  l'Application, y compris en cas d'inexactitude d'un numéro affiché, de
+  panne technique ou d'échec d'envoi d'un message via la fonction Contact
+  d'urgence.</p>
+
+  <h2>8. Publicité</h2>
+  <p>L'Application affiche un bandeau publicitaire fourni par un
+  prestataire tiers, Google AdMob. L'affichage de ces publicités est régi
+  par les conditions d'utilisation de Google, disponibles à l'adresse
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a>.
+  Nous ne contrôlons pas le contenu des publicités diffusées par ce
+  service.</p>
+
+  <h2>9. Modifications</h2>
+  <p>Nous pouvons modifier ces Conditions à tout moment. La poursuite de
+  l'utilisation de l'Application après une modification vaut acceptation
+  des nouvelles Conditions.</p>
+
+  <h2>10. Droit applicable</h2>
+  <p>Les présentes Conditions sont régies par le droit de la province de
+  Québec, Canada. Tout litige sera soumis à la compétence exclusive des
+  tribunaux de la province de Québec, Canada.</p>
+
+  <h2>11. Contact</h2>
+  <p>Pour toute question : <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+</div>
+
+<!-- ================= ENGLISH ================= -->
+<div data-lang="en">
+  <h1 style="font-size:1.4rem;margin-top:10px;">Terms of Use</h1>
+  <p class="updated">Last updated: September 1, 2026</p>
+
+  <p>Welcome to WorldSOS. These Terms of Use ("Terms") govern your use of
+  the WorldSOS mobile application ("the App"), published by CTCode -
+  Connais Ton Code ("we", "us"). By installing or using the App, you
+  agree to these Terms.</p>
+
+  <h2>1. Purpose of the App</h2>
+  <p>WorldSOS is an information tool that displays local emergency
+  numbers (police, fire, ambulance, poison control, crisis support,
+  domestic violence support, child protection) based on the country and,
+  for the United States and Canada, the state/province/territory
+  detected or selected by the user. The App works entirely offline.</p>
+
+  <h2>2. What WorldSOS is not</h2>
+  <p><strong>WorldSOS is not an emergency service</strong> and is not
+  affiliated with any government emergency service. The App does not
+  transmit any call, alert, or message to emergency services. In a real
+  emergency, dial the displayed number directly using your phone. The
+  App is a directory, not an intermediary.</p>
+
+  <h2>3. Accuracy of information</h2>
+  <p>We make reasonable efforts to keep displayed numbers up to date
+  using public, official sources, but <strong>we cannot guarantee they are
+  accurate, complete, or always current</strong>: emergency numbers can
+  change without notice depending on the country and jurisdiction.
+  Always verify with an official local source when possible. WorldSOS is
+  provided for informational purposes only and does not replace your own
+  judgment or instructions from local authorities.</p>
+
+  <h2>4. "Emergency Contact" feature</h2>
+  <p>The App lets you save, locally on your device, the details of a
+  trusted contact. The "Text Message" and "Email" buttons open your
+  device's native messaging/email app with a pre-filled message —
+  <strong>your phone, through your own apps, actually sends the
+  message</strong>, not WorldSOS. Sending may fail for reasons outside
+  our control (no network, app not installed, etc.).</p>
+
+  <h2>5. GPS location</h2>
+  <p>The App uses your device's GPS position, <strong>processed entirely on
+  the device</strong>, to automatically determine your country and, for
+  the United States and Canada, your state/province/territory. You may
+  deny location access and select your country manually instead.</p>
+
+  <h2>6. Minimum age</h2>
+  <p>The App is a general information tool usable by anyone, including
+  minors who need quick access to emergency numbers. It does not
+  knowingly collect personal data about minors (see the Privacy
+  Policy).</p>
+
+  <h2>7. Limitation of liability</h2>
+  <p>To the fullest extent permitted by applicable law, CTCode - Connais
+  Ton Code shall not be liable for any direct or indirect damages arising
+  from the use or inability to use the App, including from an inaccurate
+  displayed number, technical failure, or failure to send a message via
+  the Emergency Contact feature.</p>
+
+  <h2>8. Advertising</h2>
+  <p>The App displays an ad banner provided by a third-party service,
+  Google AdMob. The display of these ads is governed by Google's own
+  terms of service, available at
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a>.
+  We do not control the content of ads served through this service.</p>
+
+  <h2>9. Changes</h2>
+  <p>We may modify these Terms at any time. Continued use of the App
+  after a change constitutes acceptance of the new Terms.</p>
+
+  <h2>10. Governing law</h2>
+  <p>These Terms are governed by the laws of the Province of Québec,
+  Canada. Any dispute shall be subject to the exclusive jurisdiction of
+  the courts of the Province of Québec, Canada.</p>
+
+  <h2>11. Contact</h2>
+  <p>For any question: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+</div>
+
+<!-- ================= ESPAÑOL ================= -->
+<div data-lang="es">
+  <h1 style="font-size:1.4rem;margin-top:10px;">Términos de uso</h1>
+  <p class="updated">Última actualización: 1 de septiembre de 2026</p>
+
+  <p>Bienvenido a WorldSOS. Estos Términos de uso ("Términos") rigen el
+  uso de la aplicación móvil WorldSOS ("la App"), publicada por CTCode -
+  Connais Ton Code ("nosotros"). Al instalar o usar la App, aceptas
+  estos Términos.</p>
+
+  <h2>1. Propósito de la App</h2>
+  <p>WorldSOS es una herramienta informativa que muestra números de
+  emergencia locales (policía, bomberos, ambulancia, centro de
+  toxicología, línea de crisis, apoyo a víctimas de violencia doméstica,
+  protección infantil) según el país y, en Estados Unidos y Canadá, el
+  estado/provincia/territorio detectado o seleccionado por el usuario.
+  La App funciona completamente sin conexión a internet.</p>
+
+  <h2>2. Lo que WorldSOS no es</h2>
+  <p><strong>WorldSOS no es un servicio de emergencias</strong> y no está
+  afiliada a ningún servicio de emergencias gubernamental. La App no
+  transmite ninguna llamada, alerta o mensaje a los servicios de
+  emergencia. En una emergencia real, marca directamente el número
+  mostrado desde tu teléfono. La App es un directorio, no un
+  intermediario.</p>
+
+  <h2>3. Exactitud de la información</h2>
+  <p>Nos esforzamos por mantener actualizados los números mostrados a
+  partir de fuentes públicas y oficiales, pero <strong>no podemos garantizar
+  que sean exactos, completos o estén siempre actualizados</strong>: los
+  números de emergencia pueden cambiar sin previo aviso según el país y
+  la jurisdicción. Verifica siempre, si es posible, con una fuente local
+  oficial. WorldSOS se ofrece únicamente con fines informativos y no
+  sustituye tu propio criterio ni las instrucciones de las autoridades
+  locales.</p>
+
+  <h2>4. Función "Contacto de emergencia"</h2>
+  <p>La App te permite guardar, de forma local en tu dispositivo, los
+  datos de un contacto de confianza. Los botones "Mensaje de texto" y
+  "Correo electrónico" abren la app nativa de mensajería/correo de tu
+  dispositivo con un mensaje prellenado — <strong>es tu teléfono, a través
+  de tus propias apps, el que realmente envía el mensaje</strong>, no
+  WorldSOS. El envío puede fallar por razones fuera de nuestro control
+  (sin red, app no instalada, etc.).</p>
+
+  <h2>5. Ubicación GPS</h2>
+  <p>La App utiliza la posición GPS de tu dispositivo, <strong>procesada
+  enteramente en el dispositivo</strong>, para determinar automáticamente
+  tu país y, en Estados Unidos y Canadá, tu estado/provincia/territorio.
+  Puedes denegar el acceso a la ubicación y seleccionar tu país
+  manualmente.</p>
+
+  <h2>6. Edad mínima</h2>
+  <p>La App es una herramienta de información general utilizable por
+  cualquier persona, incluidos menores que necesiten acceder rápidamente
+  a números de emergencia. No recopila conscientemente datos personales
+  de menores (ver la Política de privacidad).</p>
+
+  <h2>7. Limitación de responsabilidad</h2>
+  <p>En la medida máxima permitida por la ley aplicable, CTCode - Connais
+  Ton Code no será responsable de daños directos o indirectos derivados
+  del uso o la imposibilidad de uso de la App, incluidos los originados
+  por un número mostrado inexacto, un fallo técnico o el fallo en el
+  envío de un mensaje mediante la función Contacto de emergencia.</p>
+
+  <h2>8. Publicidad</h2>
+  <p>La App muestra un banner publicitario proporcionado por un proveedor
+  externo, Google AdMob. La visualización de estos anuncios se rige por
+  los propios términos de servicio de Google, disponibles en
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a>.
+  No controlamos el contenido de los anuncios difundidos a través de
+  este servicio.</p>
+
+  <h2>9. Modificaciones</h2>
+  <p>Podemos modificar estos Términos en cualquier momento. El uso
+  continuado de la App tras una modificación constituye la aceptación de
+  los nuevos Términos.</p>
+
+  <h2>10. Ley aplicable</h2>
+  <p>Estos Términos se rigen por las leyes de la provincia de Quebec,
+  Canadá. Cualquier disputa quedará sometida a la jurisdicción exclusiva
+  de los tribunales de la provincia de Quebec, Canadá.</p>
+
+  <h2>11. Contacto</h2>
+  <p>Para cualquier pregunta: <a href="mailto:kycodesoft@gmail.com">kycodesoft@gmail.com</a></p>
+</div>
+
+</main>
+
+<footer>© 2026 CTCode — Jean-Bernard Gallo</footer>
+
+<script>
+  function setLang(lang){
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.classList.toggle('active-lang', el.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('.lang-pills button').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-setlang') === lang);
+    });
+    try { localStorage.setItem('worldsos-lang', lang); } catch(e) {}
+    document.documentElement.setAttribute('lang', lang);
+  }
+  document.querySelectorAll('.lang-pills button').forEach(function(btn){
+    btn.addEventListener('click', function(){ setLang(btn.getAttribute('data-setlang')); });
+  });
+  var saved = 'fr';
+  try { saved = localStorage.getItem('worldsos-lang') || 'fr'; } catch(e) {}
+  setLang(saved);
+</script>
+
+</body>
+</html>
