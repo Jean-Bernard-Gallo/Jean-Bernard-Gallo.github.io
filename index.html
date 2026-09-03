@@ -240,65 +240,52 @@
   p { margin: 0.9em 0; }
   .card > p { font-size: 0.75rem; }
 
-  /* Carrousel de captures d'écran (style "coverflow") */
+  /* Carrousel de captures d'écran */
   .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 6px;
     margin: 15px 0 6px;
   }
   .carousel-viewport {
     overflow: hidden;
     border-radius: 11px;
-    width: 222px;
-    padding: 0 36px;
-    box-sizing: border-box;
+    max-width: 225px;
   }
   .carousel-track {
-    position: relative;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+    transition: transform 0.35s ease;
   }
   .carousel-slide {
-    flex: 0 0 150px;
+    flex: 0 0 100%;
     display: flex;
     justify-content: center;
   }
-  .carousel-slide:not(.is-active) { cursor: pointer; }
   .carousel-slide img {
     width: 100%;
+    max-width: 180px;
     height: auto;
     border-radius: 11px;
     border: 1px solid var(--bordure);
     display: block;
     background: var(--fond-clair);
-    transform: scale(0.86);
-    filter: brightness(0.72);
-    transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1), filter 0.45s;
-  }
-  .carousel-slide.is-active img {
-    transform: scale(1);
-    filter: brightness(1);
   }
   .carousel-arrow {
     flex-shrink: 0;
-    width: 24px;
-    height: 24px;
+    width: 27px;
+    height: 27px;
     border-radius: 50%;
     background: var(--carte);
     border: 1px solid var(--bordure);
     color: var(--bleu-principal);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: background 0.15s;
-    z-index: 2;
   }
   .carousel-arrow:hover:not(:disabled) { background: var(--fond-clair); }
   .carousel-arrow:disabled { opacity: 0.3; cursor: default; }
@@ -393,17 +380,7 @@
   }
 
   @media (min-width: 600px) {
-    .carousel-viewport { width: 270px; padding: 0 45px; }
-    .carousel-track { gap: 14px; }
-    .carousel-slide { flex-basis: 180px; }
-    .carousel-arrow { width: 27px; height: 27px; font-size: 0.9rem; }
-  }
-
-  @media (max-width: 380px) {
-    .carousel-viewport { width: 190px; padding: 0 30px; }
-    .carousel-track { gap: 8px; }
-    .carousel-slide { flex-basis: 130px; }
-    .carousel-arrow { width: 20px; height: 20px; font-size: 0.75rem; }
+    .carousel-slide img { max-width: 225px; }
   }
 
   @media (max-width: 640px) {
@@ -654,9 +631,8 @@
     });
   });
 
-  // Carrousel de captures d'écran, style "coverflow" (une instance par carte)
+  // Carrousel de captures d'écran (une instance par carte)
   document.querySelectorAll('.carousel').forEach((carousel) => {
-    const viewport = carousel.querySelector('.carousel-viewport');
     const track = carousel.querySelector('.carousel-track');
     const slides = carousel.querySelectorAll('.carousel-slide');
     const dotsWrap = carousel.nextElementSibling;
@@ -667,15 +643,7 @@
 
     function goTo(i) {
       index = Math.max(0, Math.min(i, slides.length - 1));
-
-      // Centre la slide active dans la fenêtre visible (les voisines dépassent et sont rognées)
-      const paddingLeft = parseFloat(getComputedStyle(viewport).paddingLeft);
-      const activeSlide = slides[index];
-      const slideCenter = activeSlide.offsetLeft + activeSlide.offsetWidth / 2;
-      const tx = viewport.clientWidth / 2 - paddingLeft - slideCenter;
-      track.style.transform = `translateX(${tx}px)`;
-
-      slides.forEach((s, idx) => s.classList.toggle('is-active', idx === index));
+      track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((d, idx) => d.classList.toggle('active', idx === index));
       prevBtn.disabled = index === 0;
       nextBtn.disabled = index === slides.length - 1;
@@ -684,8 +652,6 @@
     prevBtn.addEventListener('click', () => goTo(index - 1));
     nextBtn.addEventListener('click', () => goTo(index + 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
-    slides.forEach((s, i) => s.addEventListener('click', () => { if (i !== index) goTo(i); }));
-    window.addEventListener('resize', () => goTo(index));
 
     goTo(0);
   });
