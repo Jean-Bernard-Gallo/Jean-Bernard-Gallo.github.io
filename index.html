@@ -414,6 +414,58 @@
     </div>
   </section>
 
+  <section id="world-sos">
+    <div class="card">
+      <div class="project-header">
+        <div class="project-identity">
+          <img class="app-icon" src="assets/world-sos/icon/favicon.png" alt="Icône de l'application WorldSOS">
+          <div>
+            <h2>WorldSOS</h2>
+            <p class="project-tagline"><span data-i18n="app-lang-label">Langues de l'application :</span> <strong>FR / EN / ES</strong></p>
+          </div>
+        </div>
+
+        <div class="stores">
+          <button type="button" class="store-badge disabled" aria-disabled="true" aria-label="App Store" onclick="this.classList.toggle('show-tooltip')">
+            <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.428 2.163-1.16 2.95-.803.86-2.15 1.51-3.23 1.42-.14-1.11.42-2.27 1.12-2.99.79-.85 2.18-1.48 3.27-1.38zM20.68 17.06c-.4.92-.59 1.33-1.1 2.14-.71 1.13-1.71 2.53-2.95 2.54-1.1.01-1.38-.71-2.87-.7-1.49.01-1.8.72-2.9.71-1.24-.01-2.19-1.29-2.9-2.42-1.98-3.14-2.19-6.83-.97-8.79.87-1.4 2.24-2.22 3.53-2.22 1.31 0 2.14.72 3.22.72 1.05 0 1.7-.72 3.22-.72 1.15 0 2.37.63 3.24 1.71-2.85 1.56-2.39 5.64.23 6.83z"/></svg>
+            <span class="store-badge-text">
+              <span class="line1" data-i18n="store-apple-line1">Download on the</span>
+              <span class="line2">App Store</span>
+            </span>
+            <span class="tooltip" data-i18n="store-review-tooltip">Bientôt disponible — en cours de révision Apple</span>
+          </button>
+          <button type="button" class="store-badge disabled" aria-disabled="true" aria-label="Google Play" onclick="this.classList.toggle('show-tooltip')">
+            <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 4 3.5z"/></svg>
+            <span class="store-badge-text">
+              <span class="line1" data-i18n="store-google-line1">Get it on</span>
+              <span class="line2">Google Play</span>
+            </span>
+            <span class="tooltip" data-i18n="play-tooltip">Pas encore disponible sur ce store</span>
+          </button>
+        </div>
+      </div>
+
+      <p data-i18n="worldsos-app-description">WorldSOS affiche instantanément les numéros d'urgence du pays où tu te trouves — police, pompiers, ambulance, centre antipoison, ligne de crise et plus — en détectant ton pays automatiquement par GPS, même sans connexion. L'application fonctionne entièrement hors ligne et ne collecte aucune donnée personnelle.</p>
+
+      <div class="carousel">
+        <button type="button" class="carousel-arrow prev" data-i18n-aria="carousel-prev" aria-label="Image précédente">‹</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img data-lang-src="assets/world-sos/screenshots/1-{lang}.png" alt="Capture d'écran 1 de WorldSOS"></div>
+            <div class="carousel-slide"><img data-lang-src="assets/world-sos/screenshots/2-{lang}.png" alt="Capture d'écran 2 de WorldSOS"></div>
+            <div class="carousel-slide"><img data-lang-src="assets/world-sos/screenshots/3-{lang}.png" alt="Capture d'écran 3 de WorldSOS"></div>
+          </div>
+        </div>
+        <button type="button" class="carousel-arrow next" data-i18n-aria="carousel-next" aria-label="Image suivante">›</button>
+      </div>
+      <div class="carousel-dots">
+        <button type="button" class="dot" data-index="0" aria-label="Image 1"></button>
+        <button type="button" class="dot" data-index="1" aria-label="Image 2"></button>
+        <button type="button" class="dot" data-index="2" aria-label="Image 3"></button>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -426,9 +478,11 @@
       tagline: "Conception de logiciels et applications mobiles pratiques qui simplifient des tâches du quotidien.",
       "app-lang-label": "Langues de l'application :",
       "app-description": "Easy Pool Settings simplifie l'entretien de l'eau de votre piscine ou spa : entrez vos mesures et obtenez des recommandations de dosage claires en quelques secondes. L'application fonctionne entièrement hors ligne et ne collecte aucune donnée personnelle.",
+      "worldsos-app-description": "WorldSOS affiche instantanément les numéros d'urgence du pays où tu te trouves — police, pompiers, ambulance, centre antipoison, ligne de crise et plus — en détectant ton pays automatiquement par GPS, même sans connexion. L'application fonctionne entièrement hors ligne et ne collecte aucune donnée personnelle.",
       "store-apple-line1": "Télécharger sur",
       "store-google-line1": "Disponible sur",
       "play-tooltip": "Pas encore disponible sur ce store",
+      "store-review-tooltip": "Bientôt disponible — en cours de révision Apple",
       "carousel-prev": "Image précédente",
       "carousel-next": "Image suivante",
       "contact-email": "Écrire un courriel",
@@ -438,9 +492,11 @@
       tagline: "I build practical mobile apps that simplify everyday tasks.",
       "app-lang-label": "App languages:",
       "app-description": "Easy Pool Settings simplifies pool and spa water maintenance: enter your measurements and get clear dosing recommendations in seconds. The app works entirely offline and collects no personal data.",
+      "worldsos-app-description": "WorldSOS instantly displays the emergency numbers for the country you're in — police, fire, ambulance, poison control, crisis support, and more — by automatically detecting your country via GPS, even offline. The app works entirely offline and collects no personal data.",
       "store-apple-line1": "Download on the",
       "store-google-line1": "Get it on",
       "play-tooltip": "Not yet available on this store",
+      "store-review-tooltip": "Coming soon — under Apple review",
       "carousel-prev": "Previous screenshot",
       "carousel-next": "Next screenshot",
       "contact-email": "Send an email",
@@ -479,13 +535,14 @@
     });
   });
 
-  // Carrousel de captures d'écran
-  (function initCarousel() {
-    const track = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dots .dot');
-    const prevBtn = document.querySelector('.carousel-arrow.prev');
-    const nextBtn = document.querySelector('.carousel-arrow.next');
+  // Carrousel de captures d'écran (une instance par carte)
+  document.querySelectorAll('.carousel').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dotsWrap = carousel.nextElementSibling;
+    const dots = dotsWrap.querySelectorAll('.dot');
+    const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+    const nextBtn = carousel.querySelector('.carousel-arrow.next');
     let index = 0;
 
     function goTo(i) {
@@ -501,7 +558,7 @@
     dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
 
     goTo(0);
-  })();
+  });
 
   const browserLang = ((navigator.language || 'fr').slice(0, 2) === 'en') ? 'en' : 'fr';
   setLang(browserLang);
